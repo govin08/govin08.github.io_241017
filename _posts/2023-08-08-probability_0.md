@@ -75,7 +75,7 @@ toc: false
 
 다음은 이 글들과 직접적으로 관련이 있을만한 자료들의 목록입니다.
 
-- [이상화 교수님의 『확률 및 통계』 강의에 대한 글](https://govin08.github.io/mathematics/kocw_stats/)
+- [(강의정리) 확률 및 통계](https://govin08.github.io/mathematics/kocw_stats/)
 - [statscraft의 wiki](https://github.com/hanishereandnow/Stats-Craft-LAB/wiki)
 
 직접적으로 참고할만한 영문 교과서 목록입니다.
