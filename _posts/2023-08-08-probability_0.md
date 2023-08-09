@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "확률론"
+title: "확률론 글쓰기"
 categories: mathematics
 tags: [statistics]
 use_math: true
@@ -22,8 +22,8 @@ toc: false
 각각의 목차들은 하나의 글을 구성할 것 같습니다. ("1.1. 경우의 수와 이항정리", "1.2. 확률공간" 등)
 
 1. 확률론 기초
-<br>1.1. 경우의 수와 이항정리
-<br>1.2. 확률공간
+<br>[1.1. 경우의 수와 이항정리](https://govin08.github.io/mathematics/probability_1_1/)
+<br>[1.2. 확률의 정의](https://govin08.github.io/mathematics/probability_1_2/)
 <br>1.3. 조건부확률과 독립사건
 <br>1.4. Sterling's formula
 
