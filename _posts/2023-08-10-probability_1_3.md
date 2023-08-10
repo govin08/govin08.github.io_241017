@@ -123,7 +123,7 @@ $$P(A)P(B)=P(A\cap B)\tag e$$
 먼저 $\text{(e)}$의 양변을 $P(A)$로 나누면
 
 $$
-P(B)=\frac{A\cap B}{P(A)}=P(B\mid A)
+P(B)=\frac{P(A\cap B)}{P(A)}=P(B\mid A)
 $$
 
 가 되어 $\text{(a)}$가 성립합니다.
@@ -136,8 +136,8 @@ $$
 \text{(b)}
 &\iff P(B)=P(B\mid A^c)\\[5pt]
 &\iff P(B)=\frac{P(B\cap A^c)}{P(A^c)}\\[5pt]
-&\iff P(B)P(A^c)=P(B-A)\\[5pt]
-&\iff P(B)(1-P(A))=P(B)-P(A\cap B)\\[5pt]
+&\iff P(B)P(A^c)=P(B\cap A^c)\\[5pt]
+&\iff P(B)(1-P(A))=P(B-A)\\[5pt]
 &\iff P(B)-P(A)P(B)=P(B)-P(A\cap B)\\[5pt]
 &\iff P(A)P(B)=P(A\cap B)\\[5pt]
 &\iff \text{(e)}
@@ -258,7 +258,7 @@ $P(A\mid C^c)=\frac23$ 이며
 
 $P(A)=\frac36$ 이므로
 
-![]({{site.url}}\images\2023-08-10-probability_1_3\ACtable_1.png){: .img-40-center}
+![]({{site.url}}\images\2023-08-10-probability_1_3\ACtable_3.png){: .img-40-center}
 
 $A$와 $C$는 서로 독립이 아님을 확인할 수 있습니다.
 
@@ -395,3 +395,64 @@ P(B)
 $$
 
 가 성립합니다.
+
+### (8) 전확률의 정리 (예시)
+
+다음과 같은 [문제](https://www.probabilitycourse.com/chapter1/1_4_2_total_probability.php)를 풀어봅시다.
+각각 5개의 구슬이 담겨있는 세 종류의 자루가 있습니다.
+- 첫번째 자루에는 4개의 빨간 구슬과 1개의 파란 구슬이 담겨있습니다.
+- 두번째 자루에는 2개의 빨간 구슬과 3개의 파란 구슬이 담겨있습니다.
+- 세번째 자루에는 5개의 파란 구슬이 담겨있습니다.
+
+임의로 자루를 하나 택한 뒤 자루 속에서 구슬을 하나 꺼낼 때, 빨간 구슬이 나올 확률은 얼마일까요?
+
+쉬운 문제이지만, 앞서 설명한 개념들을 활용해서 풀어보겠습니다.
+표본공간 $S$는 $S=\\{1,2,3\\}\times\\{1,2,3,4,5\\}$로 나타낼 수 있습니다.
+즉,
+
+$$
+\begin{align*}
+S
+=\{&1,2,3\}\times\{1,2,3,4,5\}\\
+=\{&(1,1), (1,2), (1,3), (1,4), (1,5),\\
+   &(2,1), (2,2), (2,3), (2,4), (2,5),\\
+   &(3,1), (3,2), (3,3), (3,4), (3,5)\}
+\end{align*}
+$$
+
+입니다.
+각각의 근원사건 $(i,j)$는 $i$번째 자루를 선택한 뒤 $j$번째 구슬을 선택하는 상황을 나타냅니다.
+총 15개의 근원사건들 중, 빨간구슬이 택해지는 경우는 첫번째 자루를 택했을 때의 4개의 경우, 두번째 자루를 택했을 때의 2개의 경우이므로, 구하는 확률은 $\frac{2+4}{15}=\frac25$이 될 것입니다.
+
+이것을 전확률의 정리로 풀어보겠습니다.
+사건 $A_1$, $A_2$, $A_3$를 각각 첫번재 자루, 두번째 자루, 세번째 자루를 선택하는 사건이라고 하겠습니다.
+수학적으로 표현하면
+
+$$
+\begin{align*}
+A_1&=\{1\}\times\{1,2,3,4,5\}=\{(1,1), (1,2), (1,3), (1,4), (1,5)\}\\
+A_2&=\{2\}\times\{1,2,3,4,5\}=\{(2,1), (2,2), (2,3), (2,4), (2,5)\}\\
+A_3&=\{3\}\times\{1,2,3,4,5\}=\{(3,1), (3,2), (3,3), (3,4), (3,5)\}
+\end{align*}
+$$
+
+입니다.
+그러면 $\\{A_1,A_2,A_3\\}$은 $S$의 분할이 됩니다.
+
+사건 $R$을 빨간 구슬을 선택하는 사건이라고 하면 전확률의 정리에 의해
+
+$$
+\begin{align*}
+P(R)
+&=P(A_1\cap R)+P(A_2\cap R)+P(A_3\cap R)\\
+&=P(A_1)P(R\mid A_1)+P(A_2)P(R\mid A_2)+P(A_3)P(R\mid A_3)\\
+&=\frac13\times\frac45+\frac13\times\frac25+\frac13\times0\\
+&=\frac{4+2}{15}\\
+&=\frac25
+\end{align*}
+$$
+
+가 됩니다.
+
+<b>참고한 자료</b>
+- [「Introduction to Probability, Statistics and Random Process」, example 1.24](https://www.probabilitycourse.com/chapter1/1_4_2_total_probability.php), 
