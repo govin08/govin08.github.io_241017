@@ -609,7 +609,7 @@ If $U\ne\\{0\\}$ and $U\ne V$ as supposed at the beginning of 2.4.2, then
 
 $$\text{dim}(U)+\text{dim}(U^0)=k+(n-k)=n=\text{dim}(V).$$
 
-If $U=\varnothing$, then $U^0=V$ and 
+If $U=\\{0\\}$, then $U^0=V$ and 
 
 $$\text{dim}(U)+\text{dim}(U^0)=0+n=n=\text{dim}(V).$$
 
