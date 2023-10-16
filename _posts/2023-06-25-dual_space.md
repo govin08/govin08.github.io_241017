@@ -605,7 +605,7 @@ $$
 
 **2.4.5 $\text{dim}(V)=\text{dim}(U)+\text{dim}(U^0)$**
 
-If $U\ne\{0\}$ and $U\ne V$ as supposed at the beginning of 2.4.2, then
+If $U\ne\\{0\\}$ and $U\ne V$ as supposed at the beginning of 2.4.2, then
 
 $$\text{dim}(U)+\text{dim}(U^0)=k+(n-k)=n=\text{dim}(V).$$
 
