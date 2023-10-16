@@ -64,7 +64,7 @@ $(F,+,\times)$ is a field if the following 11 conditions hold ;
 <li>$\forall a,b,c\in F$, $(ab)c=a(bc)$</li>
 <li>$\forall a,b\in F$, $ab=ba$</li>
 <li>$\exists 1\in F$ s.t. $\forall a\in F$, $a\times1=1\times a=a$</li>
-<li>$\forall a\in F$, $\exists a^{-1}\in F$ s.t. $aa^{-1}=a^{-1}a=1$</li>
+<li>$\forall a(\ne0)\in F$, $\exists a^{-1}\in F$ s.t. $aa^{-1}=a^{-1}a=1$</li>
 <li>$\forall a,b,c\in F$, $(a+b)c=ac+bc$</li>
 </ol>
 
