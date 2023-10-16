@@ -173,10 +173,10 @@ is a linear functional.
 **2.1.2**
 
 The set of all $n\times n$ matrices, denoted by $F^{n\times n}$ is a vectors space.
-For a fixed column vector $v\in F^n$, the quadratic form $A\mapsto y^TAy$ is a linear functional.
+For a fixed column vector $v\in F^n$, the map $A\mapsto v^TAv$, which maps a $n\times n$ matrix $A$ into the quadratic form $v^TAv$ is a linear functional.
 
-The left multiplication by $y$ and the quadratic form for each matrix $A$ are indeed linear functional since matrix operation is linear.
-But quadratic form *for each vector* $v\mapsto v^TAv$ is not a linear functional in general.
+The left multiplication by $y$ (2.1.1) and the quadratic form (2.1.2) for each matrix $A$ are indeed linear functional since matrix operation is linear.
+But quadratic form *for each vector* $v\mapsto v^TAv$ is not a linear functional.
 
 ## 2.2 Dual space
 
