@@ -348,7 +348,7 @@ Therefore, $V^\ast$ is a vector space over $F$.
 Let $\\{v_i\\}_{i=1}^n$ be a basis for $V$.
 For each $i\in\\{1,\cdots,n\\}$, let $f_i:V\to F$ be defined by
 
-$$f_i\left(\sum_{j=1}^na_jv_j\right)=a_j.$$
+$$f_i\left(\sum_{j=1}^na_jv_j\right)=a_i.$$
 
 It is equivalent to saying that $f_i$'s are linear functionals such that $f_i(v_j)=\delta_{ij}$ for all $j\in\\{1,\cdots,n\\}$, where $\delta_{ij}$ is the Kronecker delta defined by
 
