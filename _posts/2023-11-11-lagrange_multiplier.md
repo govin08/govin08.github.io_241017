@@ -53,14 +53,94 @@ toc: true
 ## 0.4. Overview
 
 Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
+(조금 어렵게 적어놓았으니)
 
-다음과 같은 문제가 있다고 합시다.
+1. 다음과 같은 최적화 문제가 있다고 합시다.
 
----
+   <div class="notice--info">
+   Maximize $f(x_1,\cdots,x_n)$ subject to $\begin{cases}g_1(x_1,\cdots,x_n)&=k_1\\&\vdots\\g_m(x_1,\cdots,x_n)&=k_m\end{cases}$.
+   </div>
 
-이후에는 0.2에서 언급한 각 자료들에 대해 나열합니다.
+2. 이 최적화문제를 풀기 위해서 다음과 같은 연립방정식을 풉니다.
 
-## 1. Paul's Online Notes
+   <div class="notice--success">
+   $$
+   \begin{cases}
+   \nabla f(x_1,\cdots,x_n) + \lambda_1\nabla g_1(x_1,\cdots,x_n)+\cdots+\lambda_m\nabla g_m(x_1,\cdots,x_n)=0\\
+   g_j(x_1,\cdots,x_n)=k_j\quad(j=1,2,\cdots,m)
+   \end{cases}
+   $$
+   </div>
+
+3. 연립방정식의 해가 $(x_1,\cdots,x_n)=\left({x_1}^{(1)},\cdots,{x_n}^{(1)}\right), \cdots, \left({x_1}^{(L)},\cdots,{x_n}^{(L)}\right)$ 과 같이 $L$개 주어진다면, 이 중에서 위 최적화문제의 답이 있습니다.
+   그러니까,
+   $f\left({x_1}^{(1)},\cdots,{x_n}^{(1)}\right)$,
+   $\cdots$,
+   $f\left({x_1}^{(L)},\cdots,{x_n}^{(L)}\right)$
+   를 각각 계산하고 이 중에 가장 큰 값을 고르면 그 값이 구하고자 하는 최댓값이 됩니다.
+
+이와 관련한 몇가지 사항들입니다.
+
+- 1에서 $f$를 objective function(목적함수)라고 하고, $g_j(x_1,\cdots,x_n)=k_j$ 꼴의 식들을 constraint(제약조건)라고 합니다.
+  여기에서 $f$는 $f:\mathbb R^n\to\mathbb R$이고, $g_j$는 $g_j:\mathbb R^n\to\mathbb R$입니다.
+  즉, $f$, $g_j$는 모두 다변수 실함수입니다.
+- 일반성을 잃지 않고 $k_i$들을 모두 $0$으로 두어도 괜찮습니다.
+  그러니까, $g_j(x_1,\cdots,x_n)=k_j$라는 제약조건이 있었다면, 새로운 함수 $g'_j$를 $g'_j(x_1,\cdots,x_n)=g_j(x_1,\cdots,x_n)-k_j$으로 둘 수 있습니다.
+  그러면 제약조건이 $g'_j(x_1,\cdots,x_n)=0$의 형태로 바뀔 수 있다는 것입니다.
+- 2에서 $f$의 gradient가 있으므로 $f$는 당연히 미분가능한 함수여야 합니다.
+- 2는 "잘 풀리는" 연립방정식입니다.
+  다시 말해, 변수의 개수와 식의 개수가 같습니다.
+  변수는 $x_1$, $\cdots$, $x_n$, $\lambda_1$, $\cdots$, $\lambda_m$의 $n+m$개이고, 식도
+  
+  $$
+  \begin{align*}
+  \frac{\partial f}{\partial x_1}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_1}(x_1,\cdots,x_n)+\cdots+\lambda_1\frac{\partial g_m}{\partial x_1}(x_1,\cdots,x_n)\\
+  &\vdots\\
+  \frac{\partial f}{\partial x_n}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_n}(x_1,\cdots,x_n)+\cdots+\lambda_1\frac{\partial g_m}{\partial x_n}(x_1,\cdots,x_n)\\
+  g_1(x_1,\cdots,x_n) =& k_1\\
+  &\vdots\\
+  g_m(x_1,\cdots,x_n) =& k_m\\
+  \end{align*}
+  $$
+
+  의 $n+m$개이기 때문입니다.
+- 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
+  그러니까 Lagrange multiplier는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
+
+문제의 formulation을 꽤 일반적으로 적어보았습니다.
+그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
+다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
+예를 들어, $g_1$, $\cdots $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을거고, 그러면 $lambda$도 하나의 벡터로서 표현할 수도 있을 것입니다.
+
+그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
+[Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
+
+# 1. Paul's Online Notes
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers.
+
+Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
+
+다음과 같은 최적화 문제가 있다고 합시다.
+
+<div class="notice--info">
+Maximize $f(x,y,z)$ subject to $g(x,y,z)=k$.
+</div>
+
+일반성을 잃지 않고 $k=0$으로 두어도 괜찮을 것입니다.
+이 문제는 다음과 같은 연립방정식을 푸는 것에 대응됩니다.
+
+<div class="notice--success">
+$$
+\begin{cases}
+\nabla f(x,y,z) = \lambda g(x,y,z)\\
+g(x,y,z)=k
+\end{cases}
+$$
+</div>
+
+이것은 정말로 연립방정식입니다.
+gradient가 포함된 첫번째 식은 사실은 세 개의 식이고, 아래의 식까지 합치면 네 개의 식입니다.
+변수는 $x$, $y$, $z$, $\lambda$의 네 개이므로 이 연립방정식은 '풀리는' 연립방정식입니다.
+이 연립방정식
 
