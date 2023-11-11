@@ -119,7 +119,8 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
 Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (...)" 형식의 조건문으로 서술하면 다음과 같이 될 것입니다.
 
 <div class="notice">
-제약조건 $g(x,y)=k$ 하에서 $f(x,y)$가 $P(x_0,y_0)$에서 최댓값(최솟값)을 가지면 $\nabla f(x_0,y_0)=\lambda\nabla g(x_0,y_0)$를 만족시키는 실수 $\lambda$가 존재합니다.
+<b> 정리 </b> <br>
+제약조건 $g_1(x_1,\cdots,x_n)=k_1$, $\cdots$, $g_m(x_1,\cdots,x_n)=k_m$ $f(x_1,\cdots,x_n)$가 $P(x_1^\ast,\cdots,x_n^\ast)$에서 최댓값(최솟값)을 가지면 $\nabla f(x_1^\ast,\cdots,x_n^\ast)+\lambda_1\nabla g_1(x_1^\ast,\cdots,x_n^\ast)+\cdots+\lambda_m\nabla g_m(x_1^\ast,\cdots,x_n^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\cdots$, $\lambda_m$이 존재합니다.
 </div>
 
 
@@ -127,7 +128,7 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
-Paul's Online Notes 에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
+[Paul's Online Notes ]에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
 
 ## 1.1. 문제
 
@@ -365,11 +366,11 @@ $$
    따라서 $f(x,y)$의 최댓값은 $\frac{65}8$이고 최대일 때의 $x$와 $y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 입니다.
    이것은 이차함수나 부등식의 영역을 통해 구한 답과 일치합니다.
 
-## 1.5. 해석 (Lagrange multiplier)
+## 1.5. 해석(Lagrange multiplier)
 
 이러한 Lagrange multiplier 방식의 풀이가 왜 유효한지에 대한 설명은 다음과 같습니다.
 
-1.3에서, 이 최적화 문제는
+1.3에서 이 최적화 문제는
 
 <div class="notice--info">
 두 그래프 $\{(x,y):g(x,y)=k\}$, $\{(x,y):f(x,y)=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
@@ -382,10 +383,104 @@ $$
 그리고 그 순간은 $f$와 $g$의 gradient가 서로 같은 방향을 가리키는 (혹은 반대방향을 가리키는) 순간입니다.
 즉,
 
-$$\nabla f\parallel\nabla g\quad\text{at}\quad P(x_0,y_0)$$
+$$\nabla f\parallel\nabla g\quad\text{at}\quad P^\ast(x^\ast,y^\ast)$$
 
 이어야 합니다.
 따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.pn){: .img-50-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.png){: .img-50-center}
 
+# 2. Proof of Lagrange Multiplier
+
+ - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
+
+MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 설명과 증명을 보여주고 있습니다.
+꼭 필요한 말들만 적어서 간결하게 설명하고 있습니다.
+
+## 2.1. The statement
+
+1. 변수가 3개인 함수에 대한 최적화문제
+
+   <div class="notice--info">
+   제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$의 최댓값을 구하여라.
+   </div>
+
+2. 를 풀기위해서는 연립방정식
+
+   <div class="notice--success">
+   $$
+   \begin{cases}
+   \nabla f(x,y)=\lambda\nabla g(x,y)\\
+   g(x,y)=k\quad(j=1,2,\cdots,m)
+   \end{cases}
+   $$
+   </div>
+
+3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 게 된다고 했었습니다.
+
+그리고, 이것은 다음과 같은 정리로 state될 수 있다고도 했었습니다.
+
+<div class="notice">
+<b> 정리 </b> <br>
+제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
+</div>
+
+MIT 자료에서는 이 statement를 증명합니다.
+
+## 2.2. An analytic proof
+
+$g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k$은 하나의 곡면 $\alpha$를 의미합니다.
+주어진 최적화문제는, 점 $P(x,y,z)$가 곡면 $\alpha$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
+
+위 정리의 가정에 의하면, $f$는 이 곡면 $\alpha$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
+곡선 $\boldsymbol r(t)=\left(x(t), y(t), z(t)\right)$을 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이라고 가정하면,
+곡선 $\boldsymbol r:\mathbb R\to\mathbb R^3$와 $f:\mathbb R^3\to\mathbb R$의 합성함수인 $f\circ \boldsymbol r:\mathbb R\to\mathbb R$은 $t=0$에서 최댓값을 가지는 실함수입니다.
+즉,
+
+$$f\left(x(t),y(t),g(t)\right)$$
+
+는 $t=0$에서 최댓값을 가지는 함수입니다.
+따라서,
+
+$$\frac{d}{dt}\left[f\left(x(t),y(t),z(t)\right)\right]=0$$
+
+입니다.
+그러면 연쇄법칙(chian rule)에 의해
+
+$$\left.\frac{dx}{dt}\frac{\partial f}{\partial x}+\frac{dy}{dt}\frac{\partial f}{\partial y}+\frac{dz}{dt}\frac{\partial f}{\partial z}\right|_{t=0}=0$$
+
+입니다.
+이것을 다시 쓰면
+
+$$
+\begin{gather*}
+\left.\left(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt}\right)
+\cdot
+\left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)\right|_{t=0}=0\\
+\boldsymbol r'(0)
+\cdot
+\nabla f(x^\ast,y^\ast,z^\ast)
+=0
+\end{gather*}
+$$
+
+입니다.
+
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.2.jpg){: .img-50-center}
+
+그런데 $\boldsymbol r$이 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이었으므로,
+곡면 $\alpha$의 $P^\ast$에서의 접평면 위의 임의의 벡터 $v$에 대하여
+
+$$v\cdot \nabla f(x^\ast,y^\ast,z^\ast)=0$$
+
+입니다.
+따라서, $\alpha$의 $P^\ast$에서의 법선벡터인 $\nabla g(x^\ast, y^\ast, z^\ast)$는 $\nabla f(x^\ast,y^\ast,z^\ast)$와 평행하거나 반대방향일 수밖에 없습니다.
+그러므로
+
+$$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
+
+를 만족시키는 실수 $\lambda$가 존재합니다.
+
+# 3. 
+
+[pdf 파일](https://github.com/govin08/basic_math/blob/master/2023/1108_lagrange_multiplier/1108_lagrange_multiplier.pdf)
