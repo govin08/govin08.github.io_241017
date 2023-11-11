@@ -9,26 +9,6 @@ author_profile: false
 toc: true
 ---
 
-- [0. Overview](#0-overview)
-  - [0.1. Motivation](#01-motivation)
-  - [0.2. 자료들](#02-자료들)
-  - [0.3. 이전 공부](#03-이전-공부)
-  - [0.4. Lagrange multiplier](#04-lagrange-multiplier)
-- [1. A Simple Example](#1-a-simple-example)
-  - [1.1. 문제](#11-문제)
-  - [1.2. 풀이(이차함수)](#12-풀이이차함수)
-  - [1.3. 풀이(부등식의 영역)](#13-풀이부등식의-영역)
-  - [1.4. 풀이(Lagrange multiplier)](#14-풀이lagrange-multiplier)
-  - [1.5. 해석(Lagrange multiplier)](#15-해석lagrange-multiplier)
-- [2. One multiplier](#2-one-multiplier)
-  - [2.1. The statement](#21-the-statement)
-  - [2.2. a proof](#22-a-proof)
-- [2. Two multipliers](#2-two-multipliers)
-  - [3.1. The statement](#31-the-statement)
-  - [3.2. a proof](#32-a-proof)
-- [4. Epilogue](#4-epilogue)
-
-
 # 0. Overview
 
 ## 0.1. Motivation
