@@ -28,8 +28,8 @@ toc: true
 
 [1]에는 Lagrange multiplier에 대한 아주 기본적인 설명과 예제가 있습니다.
 [2]에는 Lagrange multiplier에 대한 증명 혹은 설명을 두 가지(기하학적인 설명, 해석적인 증명)로 제시하고 있습니다.
-이때, [1]과 [2]는 모두 constraint의 개수가 1개인 Lagrange multiplier에 대해 다루고 있고 변수의 개수는 2개 또는 3개입니다.
-[3]에서는 constraint의 개수가 2개이고 변수의 개수가 3개인 Lagrange multiplier의 방법론을 기하학적으로 증명하고, 예시도 들고 있습니다.
+이때, [1]과 [2]는 모두 constraint의 개수가 1개인 Lagrange multiplier method에 대해 다루고 있고 변수의 개수는 2개 또는 3개입니다.
+[3]에서는 constraint의 개수가 2개이고 변수의 개수가 3개인 Lagrange multiplier method의 방법론을 기하학적으로 증명하고, 예시도 들고 있습니다.
 
 그러니까, 아주 일반적인 Lagrange multiplier에 대해서는 보지 않은 셈입니다.
 다시 말해, 변수의 개수와 constraint의 개수가 임의로 주어지는 경우에 대해서는 보지 않았습니다.
@@ -40,7 +40,7 @@ toc: true
 
 ## 0.3. 이전 공부
 
-학부 1학년 2학기에 Lagrange multiplier에 대해 배웠습니다.
+학부 1학년 2학기에 Lagrange multiplier method에 대해 배웠습니다.
 그런데 아마도 시험범위에는 속하지 않았던 것 같기도 합니다.
 워낙 vector calculus에서 다루는 내용이 방대하니, Lagrange multiplier는 뒷전이었던 것 같습니다.
 그 이후 해석학이나 다른 학부 수업에서는 이걸 다루는 걸 거의 못봤고, 기하학 수업에서 잠깐 K교수님이 언급하는 걸 들었던 것도 같습니다.
