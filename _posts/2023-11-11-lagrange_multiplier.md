@@ -399,7 +399,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 
 ## 2.1. The statement
 
-1. 변수가 3개인 함수에 대한 최적화문제
+1. 변수가 3개인 함수 $f$에 대한 최적화문제
 
    <div class="notice--info">
    제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$의 최댓값을 구하여라.
@@ -416,9 +416,9 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
    $$
    </div>
 
-3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 게 된다고 했었습니다.
+3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
 
-그리고, 이것은 다음과 같은 정리로 state될 수 있다고도 했었습니다.
+그리고, 이것은 다음과 같은 정리로 state될 수 있습니다.
 
 <div class="notice">
 <b> 정리 </b> <br>
@@ -480,7 +480,132 @@ $$v\cdot \nabla f(x^\ast,y^\ast,z^\ast)=0$$
 $$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
 
 를 만족시키는 실수 $\lambda$가 존재합니다.
+$\square$
 
-# 3. 
+# 3. An Example with Two Lagrange multipliers
 
-[pdf 파일](https://github.com/govin08/basic_math/blob/master/2023/1108_lagrange_multiplier/1108_lagrange_multiplier.pdf)
+ - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
+
+이 자료에서는 제약조건이 두 개인 경우에 대해 설명합니다.
+정확한 의미에서 Lagrange multiplier란 $\lambda$값을 의미합니다.
+그런데 제약조건이 두 개라고 했으므로 Lagrange multiplier도 $\lambda_1$, $\lambda_2$의 두 개인 경우를 다루고 있습니다.
+
+이 부분은 따로 [pdf 파일](https://github.com/govin08/basic_math/blob/master/2023/1108_lagrange_multiplier/1108_lagrange_multiplier.pdf)을 만들어두기도 했습니다.
+[3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데, 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 경우를 말하게 됩니다.
+그래서 pdf 파일과 이 포스트는 증명 과정의 부등호에 있어 약간의 차이가 있습니다.
+
+## 3.1. The statement
+
+1. 변수가 3개이고 제약조건이 2개인 함수 $f$에 대한 최적화문제
+
+   <div class="notice--info">
+   제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$ 하에서 $f(x,y,z)$의 최댓값을 구하여라.
+   </div>
+
+2. 를 풀기위해서는 연립방정식
+
+   <div class="notice--success">
+   $$
+   \begin{cases}
+   \nabla f(x,y,z)+\lambda_1\nabla g_1(x,y,z)+\lambda_2\nabla g_2(x,y,z)=0\\
+   g_1(x,y,z)=k_1\\
+   g_2(x,y,z)=k_2\\
+   \end{cases}
+   $$
+   </div>
+
+3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
+
+위의 연립방정식을 상세하게 풀면
+
+$$
+\begin{gather*}
+\frac{\partial f}{\partial x}(x,y,z)+\lambda_1\frac{\partial g_1}{\partial x}(x,y,z)+\lambda_2\frac{\partial g_2}{\partial x}(x,y,z)=0\\
+\frac{\partial f}{\partial y}(x,y,z)+\lambda_1\frac{\partial g_1}{\partial y}(x,y,z)+\lambda_2\frac{\partial g_2}{\partial y}(x,y,z)=0\\
+\frac{\partial f}{\partial z}(x,y,z)+\lambda_1\frac{\partial g_1}{\partial z}(x,y,z)+\lambda_2\frac{\partial g_2}{\partial z}(x,y,z)=0\\
+g_1(x,y,z)=k_1\\
+g_2(x,y,z)=k_2
+\end{gather*}
+$$
+
+입니다.
+그리고, 이것은 다음과 같은 정리로 state될 수 있습니다.
+
+<div class="notice">
+<b> 정리 </b> <br>
+제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면
+$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재합니다.
+</div>
+
+## 3.2. A proof
+
+$g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
+두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
+그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
+
+위 정리의 가정에 의하면 $f$는 이 교선 $l$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
+이때, 교선 $l$은 미분가능한 곡선이므로, 점 $P^\ast$를 지나는 $l$의 한 접선방향 $v$를 생각할 수 있습니다.
+(단, $v$는 단위벡터, $||v||=1$.)
+$f$가 $P^\ast$에서 최댓값을 가지므로, $f$의 $v$방향의 방향도함수(directional derivative)는 0보다 작거나 같습니다.
+즉,
+
+$$D_vf(x^\ast,y^\ast,z^\ast)\le0$$
+
+이고, 따라서
+
+$$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$*$}$$
+
+입니다.
+그런데, $f$의 $-v$방향의 방향도함수 또한 0보다 작거나 같습니다.
+그러니까
+
+$$D_{-v}f(x^\ast,y^\ast,z^\ast)\le0$$
+
+이고,
+
+$$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$**$}$$
+
+입니다. 그러면 $(*)$와 $(**)$으로부터
+
+$$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v=0\tag4$$
+
+입니다.
+
+한편, 벡터 $v$는 곡면 $\alpha_1$에 속하므로 $v$는 곡면 $\alpha_1$에서의 법선벡터인 $\nabla g_1(x^\ast, y^\ast, z^\ast)$에 직교합니다.
+즉,
+$$\nabla g_1(x^\ast,y^\ast,z^\ast)\cdot v = 0\tag5$$
+입니다.
+마찬가지로
+$$\nabla g_2(x^\ast,y^\ast,z^\ast)\cdot v = 0\tag6$$
+입니다.
+
+$\mathbb R^3$에서의 $v$의 orthogonal complement를 $v^\perp$이라고 쓰면, (4), (5), (6)으로부터 각각
+
+$$
+\begin{align*}
+\nabla f(x^\ast,y^\ast,z^\ast)&\in v^\perp\\
+\nabla g_1(x^\ast,y^\ast,z^\ast)&\in v^\perp\\
+\nabla g_2(x^\ast,y^\ast,z^\ast)&\in v^\perp
+\end{align*}
+$$
+
+입니다.
+
+그리고, 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast$의 근방에서 서로 일치하지 않는다고 가정하고 있으므로
+
+$$\nabla g_1(x^\ast,y^\ast,z^\ast)\not\parallel\nabla g_2(x^\ast,y^\ast,z^\ast)$$
+
+입니다.
+따라서, $\nabla g_1(x^\ast,y^\ast,z^\ast)$, $\nabla g_2(x^\ast,y^\ast,z^\ast)$는 $v^\perp$의 기저(basis)를 이룹니다.
+그러므로 $\nabla f(x^\ast,y^\ast,z^\ast)$는 $\nabla g_1(x^\ast,y^\ast,z^\ast)$와 $\nabla g_2(x^\ast,y^\ast,z^\ast)$의 일차결합으로 표현될 수 있습니다.
+즉,
+
+$$\nabla f(x^\ast,y^\ast,z^\ast)=(-\lambda_1)\nabla g_1(x^\ast,y^\ast,z^\ast)+(-\lambda_2)\nabla g_2(x^\ast,y^\ast,z^\ast)$$
+
+를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재합니다.
+
+따라서,
+
+$$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)=0$$
+
+이 성립합니다.
