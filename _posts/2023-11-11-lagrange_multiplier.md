@@ -387,3 +387,5 @@ $$\nabla f\parallel\nabla g\quad\text{at}\quad P(x_0,y_0)$$
 이어야 합니다.
 따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
 
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.pn){: .img-50-center}
+
