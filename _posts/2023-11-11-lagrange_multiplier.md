@@ -88,7 +88,7 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
 - 일반성을 잃지 않고 $k_i$들을 모두 $0$으로 두어도 괜찮습니다.
   그러니까, $g_j(x_1,\cdots,x_n)=k_j$라는 제약조건이 있었다면, 새로운 함수 $g'_j$를 $g'_j(x_1,\cdots,x_n)=g_j(x_1,\cdots,x_n)-k_j$으로 둘 수 있습니다.
   그러면 제약조건이 $g'_j(x_1,\cdots,x_n)=0$의 형태로 바뀔 수 있다는 것입니다.
-- 2에서 $f$의 gradient가 있으므로 $f$는 당연히 미분가능한 함수여야 합니다.
+- 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다.
 - 2는 "잘 풀리는" 연립방정식입니다.
   다시 말해, 변수의 개수와 식의 개수가 같습니다.
   변수는 $x_1$, $\cdots$, $x_n$, $\lambda_1$, $\cdots$, $\lambda_m$의 $n+m$개이고, 식도
@@ -111,10 +111,17 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을거고, 그러면 $lambda$도 하나의 벡터로서 표현할 수도 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터로서 표현할 수도 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
+
+Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (...)" 형식의 조건문으로 서술하면 다음과 같이 될 것입니다.
+
+<div class="notice">
+제약조건 $g(x,y)=k$ 하에서 $f(x,y)$가 $P(x_0,y_0)$에서 최댓값(최솟값)을 가지면 $\nabla f(x_0,y_0)=\lambda\nabla g(x_0,y_0)$를 만족시키는 실수 $\lambda$가 존재합니다.
+</div>
+
 
 # 1. Paul's Online Notes
 
@@ -224,7 +231,7 @@ $x^2+y^2=1$, $8x^2-2y=k$를 만족하는 $k$의 최댓값을 구하여라.
 
 $$
 \begin{gather*}
-8x^2-2y=k
+8x^2-2y=k\\
 y=4x^2-k
 \end{gather*}
 $$
@@ -236,7 +243,48 @@ $k$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져�
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.3.gif){: .img-50-center}
 
 $k$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 작을 때이므로 포물선과 원이 아래에서 접할 때입니다.
-이 경우의 $k$값을 판별식을 통해 구해보면
+
+이 경우의 $k$값을 구하기 위해서 (판별식을 쓰면 답을 쉽게 구할 수 있지만, 좀 더 정확하게 구하기 위해) 미분을 활용할 수 있습니다.
+두 식
+
+$$
+\begin{align*}
+8x^2-2y&=k\\
+x^2+y^2&=1
+\end{align*}
+$$
+
+의 양변을 $x$에 대해 미분하면
+
+$$
+\begin{align*}
+16x-2\frac{dy}{dx}&=0\\
+2x+2y\frac{dy}{dx}&=0
+\end{align*}
+$$
+
+$$
+\begin{align*}
+8x-\frac{dy}{dx}&=0\\
+x+y\frac{dy}{dx}&=0
+\end{align*}
+$$
+
+에서
+
+$$x+8xy=0$$
+
+이고
+
+$$x(1+8y)=0$$
+
+입니다.
+
+따라서 $x=0$ 이거나 $y=-\frac18$입니다.
+그런데 $\frac{dy}{dx}=8x$가 양수인 경우를 찾고 있으므로 $x\ne0$이고 따라서 $y=-\frac18$입니다.
+이때의 $x$는 $x=\pm\frac{3\sqrt7}8$이고, 따라서 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 이며, 구하는 최댓값은 $k=8x^2-2y=\frac{65}8$이 됩니다.
+
+참고로 판별식을 사용한 풀이는 다음과 같습니다.
 
 $$
 \begin{gather*}
@@ -248,6 +296,94 @@ k=\frac{65}8
 \end{gather*}
 $$
 
-으로 간단히 구해집니다.
-(이것은 완전한 풀이가 아닐 수 있는데, 그러면 미분으로 구하는 방법도 있고 미분으로 구해도 쉽게 구해집니다.)
-따라서 구하는 최댓값은 $\frac{65}8$입니다.
+## 1.4. 풀이(Lagrange multiplier)
+
+이번에는 Lagrange multiplier로 이 문제를 풀어보겠습니다.
+
+
+1. 풀어야 하는 최적화 문제는
+
+   <div class="notice--info">
+   제약조건 $g(x,y)=k$ 하에서 $f(x,y)$의 최댓값을 구하여라.
+   </div>
+
+   이고 이때, $f(x,y)=8x^2-2y$, $g(x,y)=x^2+y^2$, $k=1$입니다.
+
+2. 이 문제를 풀기 위한 연립방정식은
+
+   <div class="notice--success">
+   $$
+   \begin{cases}
+   \nabla f(x,y)=\lambda\nabla g(x,y)\\
+   g(x,y)=k
+   \end{cases}
+   $$
+   </div>
+
+   이고, 이것을 다시 풀면
+
+   $$
+   \begin{align*}
+   f_x(x,y)&=\lambda g_x(x,y)\\
+   f_y(x,y)&=\lambda g_y(x,y)\\
+   g(x,y)&=k
+   \end{align*}
+   $$
+
+   입니다.
+   이때, $g_x=\frac{\partial g}{\partial x}$, $g_y=\frac{\partial g}{\partial y}$입니다.
+   따라서
+
+   $$
+   \begin{align*}
+   16x&=2\lambda x\tag1\\
+   -2&=2\lambda y\tag2\\
+   x^2+y^2&=1\tag3
+   \end{align*}
+   $$
+
+   을 풀면 됩니다.
+   (1)에서 $x=0$이거나 $\lambda=8$입니다.
+
+   만약 $x=0$이면, (3)으로부터 $y=\pm 1$이고 (2)로부터 이때의 $\lambda$는 $\lambda=\mp1$이 됩니다.
+
+   만약 $\lambda=8$이면, (2)에서 $y=-\frac18$이고 (3)으로부터 $x=\pm\frac{3\sqrt7}8$입니다.
+
+3. 따라서 연립방정식의 해는 $(x,y)=(0,1), (0,-1), \left(\frac{3\sqrt7}8,-\frac18\right), \left(-\frac{3\sqrt7}8,-\frac18\right)$ 이 됩니다.
+   각각의 경우에 대하여 $f(x,y)$를 계산하면
+   
+   $$
+   \begin{align*}
+   f(0,1)&=-2\\
+   f(0,-1)&=2\\
+   f\left(\frac{3\sqrt7}8,-\frac18\right)&=\frac{65}8\\
+   f\left(-\frac{3\sqrt7}8,-\frac18\right)&=\frac{65}8
+   \end{align*}
+   $$
+
+   입니다.
+   따라서 $f(x,y)$의 최댓값은 $\frac{65}8$이고 최대일 때의 $x$와 $y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 입니다.
+   이것은 이차함수나 부등식의 영역을 통해 구한 답과 일치합니다.
+
+## 1.5. 해석 (Lagrange multiplier)
+
+이러한 Lagrange multiplier 방식의 풀이가 왜 유효한지에 대한 설명은 다음과 같습니다.
+
+1.3에서, 이 최적화 문제는
+
+<div class="notice--info">
+두 그래프 $\{(x,y):g(x,y)=k\}$, $\{(x,y):f(x,y)=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+</div>
+
+와 같이 쓰일 수 있다고 했습니다.
+(단, $f(x,y)=8x^2-2y$, $g(x,y)=x^2+y^2$, $k=1$.)
+
+그러면 $k$값이 최대 또는 최소가 되는 순간은 두 그래프 (두 도형)이 움직이다가 막 떨어지는, 닿을락 말락한 순간일 수밖에 없습니다.
+그리고 그 순간은 $f$와 $g$의 gradient가 서로 같은 방향을 가리키는 (혹은 반대방향을 가리키는) 순간입니다.
+즉,
+
+$$\nabla f\parallel\nabla g\quad\text{at}\quad P(x_0,y_0)$$
+
+이어야 합니다.
+따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
+
