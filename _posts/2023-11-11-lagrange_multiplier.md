@@ -466,7 +466,7 @@ $$
 
 입니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.2.jpg){: .img-50-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.2.jpg){: .img-80-center}
 
 그런데 $\boldsymbol r$이 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이었으므로,
 곡면 $\alpha$의 $P^\ast$에서의 접평면 위의 임의의 벡터 $v$에 대하여
