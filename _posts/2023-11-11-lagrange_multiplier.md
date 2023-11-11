@@ -543,6 +543,8 @@ $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)
 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\3.2.jpg){: .img-80-center}
+
 위 정리의 가정에 의하면 $f$는 이 교선 $l$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
 이때, 교선 $l$은 미분가능한 곡선이므로, 점 $P^\ast$를 지나는 $l$의 한 접선방향 $v$를 생각할 수 있습니다.
 (단, $v$는 단위벡터, $||v||=1$.)
@@ -609,3 +611,10 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)=(-\lambda_1)\nabla g_1(x^\ast,y^\ast,z^\ast)+(-
 $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)=0$$
 
 이 성립합니다.
+$\square$
+
+# 4.
+
+지금까지 Lagrange multiplier에 대해 써봤습니다.
+처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
+오타나 비문이 많을 수 있다고 생각되기도 하고, 구성이나 구도에 있어서도 개선할 점이 많으리라고 생각되는데, 시간이 날 때마다 고쳐보도록 하겠습니다.
