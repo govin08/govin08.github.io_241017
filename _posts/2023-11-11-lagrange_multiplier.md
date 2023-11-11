@@ -9,6 +9,26 @@ author_profile: false
 toc: true
 ---
 
+- [0. Overview](#0-overview)
+  - [0.1. Motivation](#01-motivation)
+  - [0.2. 자료들](#02-자료들)
+  - [0.3. 이전 공부](#03-이전-공부)
+  - [0.4. Lagrange multiplier](#04-lagrange-multiplier)
+- [1. A Simple Example (Paul)](#1-a-simple-example-paul)
+  - [1.1. 문제](#11-문제)
+  - [1.2. 풀이(이차함수)](#12-풀이이차함수)
+  - [1.3. 풀이(부등식의 영역)](#13-풀이부등식의-영역)
+  - [1.4. 풀이(Lagrange multiplier)](#14-풀이lagrange-multiplier)
+  - [1.5. 해석(Lagrange multiplier)](#15-해석lagrange-multiplier)
+- [2. One multiplier](#2-one-multiplier)
+  - [2.1. The statement](#21-the-statement)
+  - [2.2. a proof](#22-a-proof)
+- [2. Two multipliers](#2-two-multipliers)
+  - [3.1. The statement](#31-the-statement)
+  - [3.2. a proof](#32-a-proof)
+- [4. Epilogue](#4-epilogue)
+
+
 # 0. Overview
 
 ## 0.1. Motivation
@@ -54,7 +74,7 @@ toc: true
 ## 0.4. Lagrange multiplier
 
 Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
-(조금 어렵게 적어놓았으니 확실히 아는 것이 아니라면 [다음 섹션](https://govin08.github.io/mathematics/lagrange_multiplier/#1-pauls-online-notes)을 읽을 것을 권합니다.)
+(조금 어렵게 적어놓았으니 확실히 아는 것이 아니라면 [다음 섹션](#1-a-simple-example-paul)을 읽을 것을 권합니다.)
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -124,7 +144,7 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 </div>
 
 
-# 1. Paul's Online Notes
+# 1. A Simple Example (Paul)
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
@@ -390,7 +410,7 @@ $$\nabla f\parallel\nabla g\quad\text{at}\quad P^\ast(x^\ast,y^\ast)$$
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.png){: .img-50-center}
 
-# 2. Proof of Lagrange Multiplier
+# 2. One multiplier
 
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
 
@@ -427,7 +447,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 
 MIT 자료에서는 이 statement를 증명합니다.
 
-## 2.2. An analytic proof
+## 2.2. a proof
 
 $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k$은 하나의 곡면 $\alpha$를 의미합니다.
 주어진 최적화문제는, 점 $P(x,y,z)$가 곡면 $\alpha$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
@@ -482,7 +502,7 @@ $$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
 를 만족시키는 실수 $\lambda$가 존재합니다.
 $\square$
 
-# 3. An Example with Two Lagrange multipliers
+# 2. Two multipliers
 
  - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
 
@@ -537,7 +557,7 @@ $$
 $\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재합니다.
 </div>
 
-## 3.2. A proof
+## 3.2. a proof
 
 $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
@@ -613,7 +633,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lamb
 이 성립합니다.
 $\square$
 
-# 4.
+# 4. Epilogue
 
 지금까지 Lagrange multiplier에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
