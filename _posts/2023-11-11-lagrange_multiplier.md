@@ -53,7 +53,7 @@ toc: true
 ## 0.4. Overview
 
 Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
-(조금 어렵게 적어놓았으니)
+(조금 어렵게 적어놓았으니 확실히 아는 것이 아니라면 [다음 섹션](https://govin08.github.io/mathematics/lagrange_multiplier/#1-pauls-online-notes)을 읽을 것을 권합니다.)
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -117,30 +117,135 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
 
 # 1. Paul's Online Notes
 
- - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers.
+ - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
-Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
+Paul's Online Notes 에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
 
-다음과 같은 최적화 문제가 있다고 합시다.
+## 1.1. 문제
+
+1. 다음과 같은 최적화 문제가 있다고 합시다.
+
+   <div class="notice--info">
+   제약조건 $g(x,y)=k$ 하에서 $f(x,y)$의 최댓값을 구하여라.
+   </div>
+
+2. 이 최적화문제를 풀기 위해서 다음과 같은 연립방정식을 풉니다.
+
+   <div class="notice--success">
+   $$
+   \begin{cases}
+   \nabla f(x,y)=\lambda\nabla g(x,y)\\
+   g(x,y)=k\quad(j=1,2,\cdots,m)
+   \end{cases}
+   $$
+   </div>
+
+3. 연립방정식의 해가 $(x,y)=(x^{(1)},y^{(1)}), \cdots, (x^{(L)},y^{(L)})$ 과 같이 $L$개 주어진다면, 이 중에서 위 최적화문제의 답이 있습니다.
+   그러니까, $f(x^{(1)},y^{(1)}), \cdots, f(x^{(L)},y^{(L)})$ 를 각각 계산하고 이 중에 가장 큰 값을 고르면 그 값이 구하고자 하는 최댓값이 됩니다.
+
+만약 $f$와 $g$가
+
+$$
+\begin{align*}
+f(x,y)&=8x^2-2y\\
+g(x,y)&=x^2+y^2
+\end{align*}
+$$
+
+이고 $k=1$이면, 다음과 같은 문제가 됩니다.
 
 <div class="notice--info">
-Maximize $f(x,y,z)$ subject to $g(x,y,z)=k$.
+제약조건 $x^2+y^2=1$ 하에서 $8x^2-2y$의 최댓값을 구하여라.
 </div>
 
-일반성을 잃지 않고 $k=0$으로 두어도 괜찮을 것입니다.
-이 문제는 다음과 같은 연립방정식을 푸는 것에 대응됩니다.
+## 1.2. 풀이(이차함수)
 
-<div class="notice--success">
+이 문제는 너무 간단한 문제여서 굳이 Lagrange multiplier를 쓰지 않아도 됩니다.
+예를 들어 중학교 3학년에서 배우는 '이차함수'를 사용하면
+
 $$
-\begin{cases}
-\nabla f(x,y,z) = \lambda g(x,y,z)\\
-g(x,y,z)=k
-\end{cases}
+\begin{align*}
+8x^2-2y
+&=8(1-y^2)-2y\\
+&=-8y^2-2y+8\\
+&=-8\left(y+\frac18\right)^2+\frac{65}8
+\end{align*}
 $$
+
+이 됩니다.
+즉 $8x^2-2y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$에서 최댓값 $\frac{65}8$을 가집니다.
+
+
+## 1.3. 풀이(부등식의 영역)
+
+고등학교 1학년 수준의 '부등식의 영역'으로도 풀릴 수 있습니다.
+사실 2015년 개정 교육과정으로 오면서 이것이 고등학교 1학년 범위에서 빠졌지만, 그래도 진로선택과목으로서 '경제 수학'에 해당 내용이 있는 것 같으니, 어쨌든 고등학교 수학에 속하는 수준으로 풀립니다.
+다음과 같이 풀면 됩니다.
+
+$8x^2-2y$를 $k$로 둡니다.
+즉,
+
+$$8x^2-2y=k$$
+
+로 둡니다.
+그러면 문제는
+
+<div class="notice--info">
+$x^2+y^2=1$, $8x^2-2y=k$를 만족하는 $k$의 최댓값을 구하여라.
 </div>
 
-이것은 정말로 연립방정식입니다.
-gradient가 포함된 첫번째 식은 사실은 세 개의 식이고, 아래의 식까지 합치면 네 개의 식입니다.
-변수는 $x$, $y$, $z$, $\lambda$의 네 개이므로 이 연립방정식은 '풀리는' 연립방정식입니다.
-이 연립방정식
+로 바뀔 수 있습니다.
+이것을 조금 더 정확하게 쓰면
 
+<div class="notice--info">
+두 식 $x^2+y^2=1$, $8x^2-2y=k$를 모두 만족시키는 $(x,y)$가 존재할 때, $k$의 최댓값을 구하여라.
+</div>
+
+라고 바꿔쓸 수 있습니다.
+이것은 또다시,
+
+<div class="notice--info">
+두 그래프 $x^2+y^2=1$, $8x^2-2y=k$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+</div>
+
+로 바뀔 수 있습니다.
+좀 더 엄밀하게 쓰면
+
+<div class="notice--info">
+두 그래프 $\{(x,y):x^2+y^2=1\}$, $\{(x,y):8x^2-2y=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+</div>
+
+와 같이 쓰일 수도 있을겁니다.
+여하튼, 그러면 문제는 너무 쉬워집니다.
+
+첫번째 그래프인 단위원은 고정되어 있고, 두번째 그래프인 포물선은 $k$값에 따라 달라집니다.
+정확하게는,
+
+$$
+\begin{gather*}
+8x^2-2y=k
+y=4x^2-k
+\end{gather*}
+$$
+
+로부터 포물선의 개형($4$)은 일정한데 꼭짓점 $(0,-k)$의 $y$좌표가 바뀝니다.
+
+$k$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
+
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.3.gif){: .img-50-center}
+
+$k$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 적을 때이므로 포물선과 원이 아래에서 접할 때입니다.
+이 경우의 $k$값을 판별식을 통해 구해보면
+
+$$
+\begin{gather*}
+8x^2-2y=k\\
+8(1-y^2)-2y=k\\
+8y^2-2y+8-k=0\\
+\frac D4=1-8(8-k)=0\\
+k=\frac{65}8
+\end{gather*}
+$$
+
+으로 간단히 구해집니다.
+따라서 구하는 최댓값은 $\frac{65}8$입니다.
