@@ -14,7 +14,7 @@ toc: true
   - [0.2. 자료들](#02-자료들)
   - [0.3. 이전 공부](#03-이전-공부)
   - [0.4. Lagrange multiplier](#04-lagrange-multiplier)
-- [1. A Simple Example (Paul)](#1-a-simple-example-paul)
+- [1. A Simple Example](#1-a-simple-example)
   - [1.1. 문제](#11-문제)
   - [1.2. 풀이(이차함수)](#12-풀이이차함수)
   - [1.3. 풀이(부등식의 영역)](#13-풀이부등식의-영역)
@@ -33,7 +33,7 @@ toc: true
 
 ## 0.1. Motivation
 
-이번 주 수요일(11/8)에, 직장 선배분이 Lagrange multiplier(라그랑지 승수법)에 대해 물어보셨습니다.
+이번 주 수요일(11/8)에, 직장 선배분이 Lagrange multiplier method(라그랑지 승수법)에 대해 물어보셨습니다.
 정확하게는 constraint(제약조건)의 개수가 2개인 Lagrange multiplier에 대해 문의하셨습니다.
 그날 밤에 퇴근하면서 핸드폰으로 세 개 자료 정도를 읽었고, 집에 도착해서 그 자료들을 A4용지에 써가면서 확인해보니 그 내용이 이해가 갔습니다.
 다음 날 아침에 정리한 내용을 선배에게 공유해드릴 수 있었습니다.
@@ -60,7 +60,7 @@ toc: true
 
 ## 0.3. 이전 공부
 
-학부 1학년 2학기에 Lagrange multiplier에 대해 배웠던 것 같습니다.
+학부 1학년 2학기에 Lagrange multiplier에 대해 배웠습니다.
 그런데 아마도 시험범위에는 속하지 않았던 것 같기도 합니다.
 워낙 vector calculus에서 다루는 내용이 방대하니, Lagrange multiplier는 뒷전이었던 것 같습니다.
 그 이후 해석학이나 다른 학부 수업에서는 이걸 다루는 걸 거의 못봤고, 기하학 수업에서 잠깐 K교수님이 언급하는 걸 들었던 것도 같습니다.
@@ -74,7 +74,8 @@ toc: true
 ## 0.4. Lagrange multiplier
 
 Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
-(조금 어렵게 적어놓았으니 확실히 아는 것이 아니라면 [다음 섹션](#1-a-simple-example-paul)을 읽을 것을 권합니다.)
+(조금 추상적으로 적어놓았습니다.
+사전지식이 확실히 있는 것이 아니라면 [다음 섹션](#1-a-simple-example-paul)으로 넘어갈 것을 권합니다.)
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -127,11 +128,13 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
   의 $n+m$개이기 때문입니다.
 - 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
   그러니까 Lagrange multiplier는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
+- 위 식에서의 $\lambda_j$를 Lagrange multiplier라고 부릅니다.
+  그러니까, 이러한 최적화 기법은 Lagrange multiplier 라고 불리는 것보다는 Lagrange multiplier 'method'(라그랑지 승수'법') 라고 불리는 게 맞을 것 같습니다.
 
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터로서 표현할 수도 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x$로 하나의 벡터로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
@@ -140,11 +143,11 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 
 <div class="notice">
 <b> 정리 </b> <br>
-제약조건 $g_1(x_1,\cdots,x_n)=k_1$, $\cdots$, $g_m(x_1,\cdots,x_n)=k_m$ $f(x_1,\cdots,x_n)$가 $P(x_1^\ast,\cdots,x_n^\ast)$에서 최댓값(최솟값)을 가지면 $\nabla f(x_1^\ast,\cdots,x_n^\ast)+\lambda_1\nabla g_1(x_1^\ast,\cdots,x_n^\ast)+\cdots+\lambda_m\nabla g_m(x_1^\ast,\cdots,x_n^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\cdots$, $\lambda_m$이 존재합니다.
+제약조건 $g_1(x_1,\cdots,x_n)=k_1$, $\cdots$, $g_m(x_1,\cdots,x_n)=k_m$ 하에서  $f$가 $P^\ast$에서 최댓값(최솟값)을 가지면 $\nabla f(P^\ast)+\lambda_1\nabla g_1(P^\ast)+\cdots+\lambda_m\nabla g_m(P^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\cdots$, $\lambda_m$이 존재합니다.
 </div>
 
 
-# 1. A Simple Example (Paul)
+# 1. A Simple Example
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
@@ -438,7 +441,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 
 3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
 
-그리고, 이것은 다음과 같은 정리로 state될 수 있습니다.
+그리고, 이것은 다음과 같은 정리로 서술될 수 있습니다.
 
 <div class="notice">
 <b> 정리 </b> <br>
@@ -549,7 +552,7 @@ g_2(x,y,z)=k_2
 $$
 
 입니다.
-그리고, 이것은 다음과 같은 정리로 state될 수 있습니다.
+그리고, 이것은 다음과 같은 정리로 서술될 수 있습니다.
 
 <div class="notice">
 <b> 정리 </b> <br>
