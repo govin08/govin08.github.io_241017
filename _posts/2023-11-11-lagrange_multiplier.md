@@ -9,9 +9,9 @@ author_profile: false
 toc: true
 ---
 
-# 0. Overview
+# 1. Overview
 
-## 0.1. Motivation
+## 1.1. Motivation
 
 이번 주 수요일(11/8)에, 직장 선배분이 Lagrange multiplier method(라그랑지 승수법)에 대해 물어보셨습니다.
 정확하게는 constraint(제약조건)의 개수가 2개인 Lagrange multiplier에 대해 문의하셨습니다.
@@ -19,7 +19,7 @@ toc: true
 다음 날 아침에 정리한 내용을 선배에게 공유해드릴 수 있었습니다.
 그리고 공부한 김에 관련 내용을 정리해서 오늘 (11/11, 토요일) 블로그에 포스팅합니다.
 
-## 0.2. 자료들
+## 1.2. 자료들
 
 참고한 자료들은 다음의 세 개 입니다.
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers.aspx)
@@ -38,7 +38,7 @@ toc: true
 
 에 자세히 설명되어 있는듯한데, 이 자료는 보지 않았습니다.
 
-## 0.3. 이전 공부
+## 1.3. 이전 공부
 
 학부 1학년 2학기에 Lagrange multiplier method에 대해 배웠습니다.
 그런데 아마도 시험범위에는 속하지 않았던 것 같기도 합니다.
@@ -51,11 +51,11 @@ toc: true
 그러니까, 문제들 각각은 고민하면 풀리는 문제이긴 한데, 한시간 안에 풀려니 풀 수가 없었습니다.
 그 때문에 거의 네 학기 정도 동안 (어느 순간엔가는 통과했습니다.) 매학기 초마다 1학년 미적분 전체 범위에 대해 시험을 봐야 했었고, 그때 Lagrange multiplier 문제가 꽤 자주 나왔었던 것 같습니다.
 
-## 0.4. Lagrange multiplier
+## 1.4. Lagrange multiplier
 
 Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
 (조금 추상적으로 적어놓았습니다.
-사전지식이 확실히 있는 것이 아니라면 [다음 섹션](#1-a-simple-example-paul)으로 넘어갈 것을 권합니다.)
+사전지식이 확실히 있는 것이 아니라면 [다음 장](#2-a-simple-example)으로 넘어갈 것을 권합니다.)
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -127,13 +127,13 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 </div>
 
 
-# 1. A Simple Example
+# 2. A Simple Example
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
 [Paul's Online Notes ]에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
 
-## 1.1. 문제
+## 2.1. 문제
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -170,7 +170,7 @@ $$
 제약조건 $x^2+y^2=1$ 하에서 $8x^2-2y$의 최댓값을 구하여라.
 </div>
 
-## 1.2. 풀이(이차함수)
+## 2.2. 풀이(이차함수)
 
 이 문제는 너무 간단한 문제여서 굳이 Lagrange multiplier를 쓰지 않아도 됩니다.
 예를 들어 중학교 3학년에서 배우는 '이차함수'를 사용하면
@@ -188,7 +188,7 @@ $$
 즉 $8x^2-2y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$에서 최댓값 $\frac{65}8$을 가집니다.
 
 
-## 1.3. 풀이(부등식의 영역)
+## 2.3. 풀이(부등식의 영역)
 
 고등학교 1학년 수준의 '부등식의 영역'으로도 풀릴 수 있습니다.
 사실 2015년 개정 교육과정으로 오면서 이것이 고등학교 1학년 범위에서 빠졌지만, 그래도 진로선택과목으로서 '경제 수학'에 해당 내용이 있는 것 같으니, 어쨌든 고등학교 수학에 속하는 수준으로 풀립니다.
@@ -244,7 +244,7 @@ $$
 
 $k$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.3.gif){: .img-50-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.3.gif){: .img-50-center}
 
 $k$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 작을 때이므로 포물선과 원이 아래에서 접할 때입니다.
 
@@ -300,7 +300,7 @@ k=\frac{65}8
 \end{gather*}
 $$
 
-## 1.4. 풀이(Lagrange multiplier)
+## 2.4. 풀이(Lagrange multiplier)
 
 이번에는 Lagrange multiplier로 이 문제를 풀어보겠습니다.
 
@@ -369,11 +369,11 @@ $$
    따라서 $f(x,y)$의 최댓값은 $\frac{65}8$이고 최대일 때의 $x$와 $y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 입니다.
    이것은 이차함수나 부등식의 영역을 통해 구한 답과 일치합니다.
 
-## 1.5. 해석(Lagrange multiplier)
+## 2.5. 해석(Lagrange multiplier)
 
 이러한 Lagrange multiplier 방식의 풀이가 왜 유효한지에 대한 설명은 다음과 같습니다.
 
-1.3에서 이 최적화 문제는
+2.3에서 이 최적화 문제는
 
 <div class="notice--info">
 두 그래프 $\{(x,y):g(x,y)=k\}$, $\{(x,y):f(x,y)=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
@@ -391,16 +391,16 @@ $$\nabla f\parallel\nabla g\quad\text{at}\quad P^\ast(x^\ast,y^\ast)$$
 이어야 합니다.
 따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.png){: .img-50-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.5.png){: .img-50-center}
 
-# 2. One multiplier
+# 3. One multiplier
 
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
 
 MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 설명과 증명을 보여주고 있습니다.
 꼭 필요한 말들만 적어서 간결하게 설명하고 있습니다.
 
-## 2.1. The statement
+## 3.1. The statement
 
 1. 변수가 3개인 함수 $f$에 대한 최적화문제
 
@@ -430,7 +430,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 
 MIT 자료에서는 이 statement를 증명합니다.
 
-## 2.2. a proof
+## 3.2. a proof
 
 $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k$은 하나의 곡면 $\alpha$를 의미합니다.
 주어진 최적화문제는, 점 $P(x,y,z)$가 곡면 $\alpha$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
@@ -469,7 +469,7 @@ $$
 
 입니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.2.jpg){: .img-80-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\3.2.jpg){: .img-80-center}
 
 그런데 $\boldsymbol r$이 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이었으므로,
 곡면 $\alpha$의 $P^\ast$에서의 접평면 위의 임의의 벡터 $v$에 대하여
@@ -485,7 +485,7 @@ $$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
 를 만족시키는 실수 $\lambda$가 존재합니다.
 $\square$
 
-# 2. Two multipliers
+# 4. Two multipliers
 
  - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
 
@@ -497,7 +497,7 @@ $\square$
 [3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데, 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 경우를 말하게 됩니다.
 그래서 pdf 파일과 이 포스트는 증명 과정의 부등호에 있어 약간의 차이가 있습니다.
 
-## 3.1. The statement
+## 4.1. The statement
 
 1. 변수가 3개이고 제약조건이 2개인 함수 $f$에 대한 최적화문제
 
@@ -540,13 +540,13 @@ $$
 $\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재합니다.
 </div>
 
-## 3.2. a proof
+## 4.2. a proof
 
 $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\3.2.jpg){: .img-80-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\4.2.jpg){: .img-80-center}
 
 위 정리의 가정에 의하면 $f$는 이 교선 $l$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
 이때, 교선 $l$은 미분가능한 곡선이므로, 점 $P^\ast$를 지나는 $l$의 한 접선방향 $v$를 생각할 수 있습니다.
@@ -616,8 +616,8 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lamb
 이 성립합니다.
 $\square$
 
-# 4. Epilogue
+# 5. Epilogue
 
-지금까지 Lagrange multiplier에 대해 써봤습니다.
+지금까지 Lagrange multiplier method에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
 오타나 비문이 많을 수 있다고 생각되기도 하고, 구성이나 구도에 있어서도 개선할 점이 많으리라고 생각되는데, 시간이 날 때마다 고쳐보도록 하겠습니다.
