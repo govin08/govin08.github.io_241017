@@ -106,6 +106,13 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
   $$
 
   의 $n+m$개이기 때문입니다.
+- 2에서 첫번째 식 대신에, $\nabla g_i$들을 모두 우변으로 이항한
+
+  $$\nabla f(x_1,\cdots,x_n) = \lambda_1\nabla g_1(x_1,\cdots,x_n)+\cdots+\lambda_m\nabla g_m(x_1,\cdots,x_n)\tag{$\star$}$$
+
+  으로 바꿔도 당연히 문제를 푸는 데는 지장이 없습니다.
+  이 포스트에서는 $k=1$일 때 $(\star)$ 식을 사용하고 $k=2$일 때는 원래 식을 사용합니다.
+
 - 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
   그러니까 Lagrange multiplier는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
 - 위 식에서의 $\lambda_j$를 Lagrange multiplier라고 부릅니다.
@@ -386,10 +393,11 @@ $$
 그리고 그 순간은 $f$와 $g$의 gradient가 서로 같은 방향을 가리키는 (혹은 반대방향을 가리키는) 순간입니다.
 즉,
 
-$$\nabla f\parallel\nabla g\quad\text{at}\quad P^\ast(x^\ast,y^\ast)$$
+$$\nabla f\parallel\nabla g$$
 
 이어야 합니다.
 따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
+아래 그림은 [2]에 나오는 그림이지만 왜 $f$가 최댓값을 가질 때 $\nabla f\parallel\nabla g$여아 하는지를 잘 설명해주는 그림이니 여기에 첨부합니다.
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.5.png){: .img-50-center}
 
@@ -413,8 +421,8 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
    <div class="notice--success">
    $$
    \begin{cases}
-   \nabla f(x,y)=\lambda\nabla g(x,y)\\
-   g(x,y)=k\quad(j=1,2,\cdots,m)
+   \nabla f(x,y,z)=\lambda\nabla g(x,y,z)\\
+   g(x,y.z)=k
    \end{cases}
    $$
    </div>
