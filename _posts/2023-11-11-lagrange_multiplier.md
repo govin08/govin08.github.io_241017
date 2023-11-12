@@ -108,7 +108,7 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
   의 $n+m$개이기 때문입니다.
 - 2에서 첫번째 식 대신에, $\nabla g_i$들을 모두 우변으로 이항한
 
-  $$\nabla f(x_1,\cdots,x_n) = \lambda_1\nabla g_1(x_1,\cdots,x_n)+\cdots+\lambda_m\nabla g_m(x_1,\cdots,x_n)\tag\star$$
+  $$\nabla f(x_1,\cdots,x_n) = \lambda_1\nabla g_1(x_1,\cdots,x_n)+\cdots+\lambda_m\nabla g_m(x_1,\cdots,x_n)\tag{$\star$}$$
 
   으로 바꿔도 당연히 문제를 푸는 데는 지장이 없습니다.
   이 포스트에서는 $k=1$일 때 $(\star)$ 식을 사용하고 $k=2$일 때는 원래 식을 사용합니다.
