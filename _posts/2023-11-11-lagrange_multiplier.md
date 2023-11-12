@@ -616,7 +616,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lamb
 이 성립합니다.
 $\square$
 
-# 5. Epilogue
+# 5.
 
 지금까지 Lagrange multiplier method에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
