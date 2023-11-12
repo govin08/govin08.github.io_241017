@@ -51,7 +51,7 @@ toc: true
 그러니까, 문제들 각각은 고민하면 풀리는 문제이긴 한데, 한시간 안에 풀려니 풀 수가 없었습니다.
 그 때문에 거의 네 학기 정도 동안 (어느 순간엔가는 통과했습니다.) 매학기 초마다 1학년 미적분 전체 범위에 대해 시험을 봐야 했었고, 그때 Lagrange multiplier 문제가 꽤 자주 나왔었던 것 같습니다.
 
-## 1.4. Lagrange multiplier method
+## 1.4. 문제정의
 
 Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 (조금 추상적으로 적어놓았습니다.
@@ -625,7 +625,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lamb
 이 성립합니다.
 $\square$
 
-# 5.
+# 5. 마치며
 
 지금까지 Lagrange multiplier method에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
