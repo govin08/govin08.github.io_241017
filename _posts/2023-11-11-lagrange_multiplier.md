@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Lagrange multiplier"
+title: "Lagrange multiplier method"
 categories: mathematics
 tags: [calculus]
 use_math: true
@@ -51,9 +51,9 @@ toc: true
 그러니까, 문제들 각각은 고민하면 풀리는 문제이긴 한데, 한시간 안에 풀려니 풀 수가 없었습니다.
 그 때문에 거의 네 학기 정도 동안 (어느 순간엔가는 통과했습니다.) 매학기 초마다 1학년 미적분 전체 범위에 대해 시험을 봐야 했었고, 그때 Lagrange multiplier 문제가 꽤 자주 나왔었던 것 같습니다.
 
-## 1.4. Lagrange multiplier
+## 1.4. Lagrange multiplier method
 
-Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
+Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 (조금 추상적으로 적어놓았습니다.
 사전지식이 확실히 있는 것이 아니라면 [다음 장](#2-a-simple-example)으로 넘어갈 것을 권합니다.)
 
@@ -114,14 +114,14 @@ Lagrange multiplier는 다음과 같은 방법론을 지칭합니다.
   이 포스트에서는 $k=1$일 때 $(\star)$ 식을 사용하고 $k=2$일 때는 원래 식을 사용합니다.
 
 - 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
-  그러니까 Lagrange multiplier는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
+  그러니까 Lagrange multiplier method는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
 - 위 식에서의 $\lambda_j$를 Lagrange multiplier라고 부릅니다.
   그러니까, 이러한 최적화 기법은 Lagrange multiplier 라고 불리는 것보다는 Lagrange multiplier 'method'(라그랑지 승수'법') 라고 불리는 게 맞을 것 같습니다.
 
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x$로 하나의 벡터로 나타낼 수 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x$로 하나의 벡터로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
@@ -130,7 +130,7 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 
 <div class="notice">
 <b> 정리 </b> <br>
-제약조건 $g_1(x_1,\cdots,x_n)=k_1$, $\cdots$, $g_m(x_1,\cdots,x_n)=k_m$ 하에서  $f$가 $P^\ast$에서 최댓값(최솟값)을 가지면 $\nabla f(P^\ast)+\lambda_1\nabla g_1(P^\ast)+\cdots+\lambda_m\nabla g_m(P^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\cdots$, $\lambda_m$이 존재합니다.
+제약조건 $g_1(x_1,\cdots,x_n)=k_1$, $\cdots$, $g_m(x_1,\cdots,x_n)=k_m$ 하에서  $f$가 $P^\ast$에서 최댓값(최솟값)을 가지면 $\nabla f(P^\ast)+\lambda_1\nabla g_1(P^\ast)+\cdots+\lambda_m\nabla g_m(P^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\cdots$, $\lambda_m$이 존재한다.
 </div>
 
 
@@ -138,7 +138,7 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
-[Paul's Online Notes ]에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
+여기에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
 
 ## 2.1. 문제
 
@@ -243,11 +243,11 @@ $x^2+y^2=1$, $8x^2-2y=k$를 만족하는 $k$의 최댓값을 구하여라.
 $$
 \begin{gather*}
 8x^2-2y=k\\
-y=4x^2-k
+y=4x^2-\frac k2
 \end{gather*}
 $$
 
-로부터 포물선의 개형($4$)은 일정한데 꼭짓점 $(0,-k)$의 $y$좌표가 바뀝니다.
+로부터 포물선의 개형($4$)은 일정한데 꼭짓점 $(0,-\frac k2)$의 $y$좌표가 바뀝니다.
 
 $k$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
 
@@ -405,8 +405,9 @@ $$\nabla f\parallel\nabla g$$
 
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
 
-MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 설명과 증명을 보여주고 있습니다.
+MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 문제 정의와 기하학적인 설명, 그리고 해석적인 증명을 보여주고 있습니다.
 꼭 필요한 말들만 적어서 간결하게 설명하고 있습니다.
+여기에서는 문제 정의와 해석적인 증명만 옮겨보았습니다.
 
 ## 3.1. The statement
 
@@ -545,7 +546,7 @@ $$
 <div class="notice">
 <b> 정리 </b> <br>
 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면
-$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재합니다.
+$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재한다.
 </div>
 
 ## 4.2. a proof
