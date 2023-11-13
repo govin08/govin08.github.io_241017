@@ -32,11 +32,11 @@ toc: true
 [3]에서는 constraint의 개수가 2개이고 변수의 개수가 3개인 Lagrange multiplier method의 방법론을 기하학적으로 증명하고, 예시도 들고 있습니다.
 
 그러니까, 아주 일반적인 Lagrange multiplier에 대해서는 보지 않은 셈입니다.
-다시 말해, 변수의 개수와 constraint의 개수가 임의로 주어지는 경우에 대해서는 보지 않았습니다.
+다시 말해, 변수의 개수와 constraint의 개수가 임의로 주어지는 경우에 대해서는 공부하지 않았습니다.
 이러한 일반적인 경우에 대해서는
 - [[4] Carnegie Mellon University / A Proof of the method of Lagrangian Multiplier](https://www.math.cmu.edu/~gautam/sj/teaching/2016-17/269-vector-analysis/pdfs/lagrange.pdf)
 
-에 자세히 설명되어 있는듯한데, 이 자료는 보지 않았습니다.
+에 자세히 설명되어 있는 듯합니다.
 
 ## 1.3. 이전 공부
 
@@ -89,16 +89,16 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 - 일반성을 잃지 않고 $k_i$들을 모두 $0$으로 두어도 괜찮습니다.
   그러니까, $g_j(x_1,\cdots,x_n)=k_j$라는 제약조건이 있었다면, 새로운 함수 $g'_j$를 $g'_j(x_1,\cdots,x_n)=g_j(x_1,\cdots,x_n)-k_j$으로 둘 수 있습니다.
   그러면 제약조건이 $g'_j(x_1,\cdots,x_n)=0$의 형태로 바뀔 수 있다는 것입니다.
-- 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다.
+- 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다. (적어도 모든 종류의 partial derivative들이 존재해야 합니다.)
 - 2는 "잘 풀리는" 연립방정식입니다.
   다시 말해, 변수의 개수와 식의 개수가 같습니다.
   변수는 $x_1$, $\cdots$, $x_n$, $\lambda_1$, $\cdots$, $\lambda_m$의 $n+m$개이고, 식도
   
   $$
   \begin{align*}
-  \frac{\partial f}{\partial x_1}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_1}(x_1,\cdots,x_n)+\cdots+\lambda_1\frac{\partial g_m}{\partial x_1}(x_1,\cdots,x_n)\\
+  \frac{\partial f}{\partial x_1}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_1}(x_1,\cdots,x_n)+\cdots+\lambda_m\frac{\partial g_m}{\partial x_1}(x_1,\cdots,x_n)\\
   &\vdots\\
-  \frac{\partial f}{\partial x_n}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_n}(x_1,\cdots,x_n)+\cdots+\lambda_n\frac{\partial g_m}{\partial x_n}(x_1,\cdots,x_n)\\
+  \frac{\partial f}{\partial x_n}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_n}(x_1,\cdots,x_n)+\cdots+\lambda_m\frac{\partial g_m}{\partial x_n}(x_1,\cdots,x_n)\\
   g_1(x_1,\cdots,x_n) =& k_1\\
   &\vdots\\
   g_m(x_1,\cdots,x_n) =& k_m\\
@@ -116,12 +116,12 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 - 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
   그러니까 Lagrange multiplier method는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
 - 위 식에서의 $\lambda_j$를 Lagrange multiplier라고 부릅니다.
-  그러니까, 이러한 최적화 기법은 Lagrange multiplier 라고 불리는 것보다는 Lagrange multiplier 'method'(라그랑지 승수'법') 라고 불리는 게 맞을 것 같습니다.
+  그러니까, 이러한 최적화 기법은 Lagrange multiplier 라고 불리는 것보다는 Lagrange multiplier <b>method</b>(라그랑지 승수<b>법</b>) 라고 불리는 게 맞을 것 같습니다.
 
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 서술할 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x$로 하나의 벡터로 나타낼 수 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdotsx_n\end{bmatrix}^T$$로 하나의 벡터로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
@@ -154,7 +154,7 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
    $$
    \begin{cases}
    \nabla f(x,y)=\lambda\nabla g(x,y)\\
-   g(x,y)=k\quad(j=1,2,\cdots,m)
+   g(x,y)=k
    \end{cases}
    $$
    </div>
@@ -301,8 +301,8 @@ $$
 \begin{gather*}
 8x^2-2y=k\\
 8(1-y^2)-2y=k\\
-8y^2-2y+8-k=0\\
-\frac D4=1-8(8-k)=0\\
+-8y^2-2y+8-k=0\\
+\frac D4=1+8(8-k)=0\\
 k=\frac{65}8
 \end{gather*}
 $$
@@ -389,7 +389,7 @@ $$
 와 같이 쓰일 수 있다고 했습니다.
 (단, $f(x,y)=8x^2-2y$, $g(x,y)=x^2+y^2$, $k=1$.)
 
-그러면 $k$값이 최대 또는 최소가 되는 순간은 두 그래프 (두 도형)이 움직이다가 막 떨어지는, 닿을락 말락한 순간일 수밖에 없습니다.
+그러면 $k$값이 최대 또는 최소가 되는 순간은 두번째 도형(포물선)이 $k$값에 따라 움직이다가, 첫번째 도형(단위원)에서 막 떨어지는, 닿을락 말락한 순간입니다.
 그리고 그 순간은 $f$와 $g$의 gradient가 서로 같은 방향을 가리키는 (혹은 반대방향을 가리키는) 순간입니다.
 즉,
 
@@ -416,8 +416,9 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
    <div class="notice--info">
    제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$의 최댓값을 구하여라.
    </div>
+   를 풀기위해서는
 
-2. 를 풀기위해서는 연립방정식
+2. 연립방정식
 
    <div class="notice--success">
    $$
@@ -427,8 +428,9 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
    \end{cases}
    $$
    </div>
+   를 풀고,
 
-3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
+3. 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
 
 그리고, 이것은 다음과 같은 정리로 서술될 수 있습니다.
 
@@ -437,7 +439,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
 </div>
 
-MIT 자료에서는 이 statement를 증명합니다.
+MIT 자료에서는 이 statement를 기본적인 vector calculus를 사용하여 증명합니다.
 
 ## 3.2. a proof
 
@@ -449,7 +451,7 @@ $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k
 곡선 $\boldsymbol r:\mathbb R\to\mathbb R^3$와 $f:\mathbb R^3\to\mathbb R$의 합성함수인 $f\circ \boldsymbol r:\mathbb R\to\mathbb R$은 $t=0$에서 최댓값을 가지는 실함수입니다.
 즉,
 
-$$f\left(x(t),y(t),g(t)\right)$$
+$$t\mapsto f\left(x(t),y(t),g(t)\right)$$
 
 는 $t=0$에서 최댓값을 가지는 함수입니다.
 따라서,
@@ -465,15 +467,18 @@ $$\left.\frac{dx}{dt}\frac{\partial f}{\partial x}+\frac{dy}{dt}\frac{\partial f
 이것을 다시 쓰면
 
 $$
-\begin{gather*}
 \left.\left(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt}\right)
 \cdot
-\left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)\right|_{t=0}=0\\
+\left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)\right|_{t=0}=0
+$$
+
+이고, 따라서
+
+$$
 \boldsymbol r'(0)
 \cdot
 \nabla f(x^\ast,y^\ast,z^\ast)
 =0
-\end{gather*}
 $$
 
 입니다.
@@ -486,7 +491,9 @@ $$
 $$v\cdot \nabla f(x^\ast,y^\ast,z^\ast)=0$$
 
 입니다.
-따라서, $\alpha$의 $P^\ast$에서의 법선벡터인 $\nabla g(x^\ast, y^\ast, z^\ast)$는 $\nabla f(x^\ast,y^\ast,z^\ast)$와 평행하거나 반대방향일 수밖에 없습니다.
+그렇다는건, $f(x^\ast,y^\ast,z^\ast)$이 $\alpha$의 $P^\ast$에서의 법선벡터라는 말입니다.
+이때, $\nabla g(x^\ast, y^\ast, z^\ast)$도 마찬가지로 $\alpha$의 $P^\ast$에서의 법선벡터이므로,
+두 벡터 $\nabla g(x^\ast, y^\ast, z^\ast)$와 $\nabla f(x^\ast,y^\ast,z^\ast)$는 서로 평행하거나 반대방향일 수밖에 없습니다.
 그러므로
 
 $$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
@@ -499,11 +506,10 @@ $\square$
  - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
 
 이 자료에서는 제약조건이 두 개인 경우에 대해 설명합니다.
-정확한 의미에서 Lagrange multiplier란 $\lambda$값을 의미합니다.
-그런데 제약조건이 두 개라고 했으므로 Lagrange multiplier도 $\lambda_1$, $\lambda_2$의 두 개인 경우를 다루고 있습니다.
+따라서 Lagrange multiplier도 $\lambda_1$, $\lambda_2$의 두 개인 경우를 다루고 있습니다.
 
 이 부분은 따로 [pdf 파일](https://github.com/govin08/basic_math/blob/master/2023/1108_lagrange_multiplier/1108_lagrange_multiplier.pdf)을 만들어두기도 했습니다.
-[3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데, 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 경우를 말하게 됩니다.
+그런데, [3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 문제를 고려했습니다.
 그래서 pdf 파일과 이 포스트는 증명 과정의 부등호에 있어 약간의 차이가 있습니다.
 
 ## 4.1. The statement
@@ -513,8 +519,9 @@ $\square$
    <div class="notice--info">
    제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$ 하에서 $f(x,y,z)$의 최댓값을 구하여라.
    </div>
+   를 풀기위해서는
 
-2. 를 풀기위해서는 연립방정식
+2. 연립방정식
 
    <div class="notice--success">
    $$
@@ -525,8 +532,9 @@ $\square$
    \end{cases}
    $$
    </div>
+   를 풀고,
 
-3. 를 풀고, 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
+3. 그 연립방정식의 해들을 대입하여 $f(x,y,z)$가 가장 큰 경우를 구하면 $f$의 최댓값을 구하는 것이 됩니다.
 
 위의 연립방정식을 상세하게 풀면
 
@@ -551,7 +559,7 @@ $\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambd
 
 ## 4.2. a proof
 
-$g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
+$g_1$, $g_2$가 미분가능하다는 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
@@ -584,6 +592,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$**$}$$
 $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v=0\tag4$$
 
 입니다.
+(이상의 과정은 3.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\matbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
 
 한편, 벡터 $v$는 곡면 $\alpha_1$에 속하므로 $v$는 곡면 $\alpha_1$에서의 법선벡터인 $\nabla g_1(x^\ast, y^\ast, z^\ast)$에 직교합니다.
 즉,
