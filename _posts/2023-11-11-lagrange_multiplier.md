@@ -592,7 +592,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$**$}$$
 $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v=0\tag4$$
 
 입니다.
-(이상의 과정은 3.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\matbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
+(이상의 과정은 3.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\mathbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
 
 한편, 벡터 $v$는 곡면 $\alpha_1$에 속하므로 $v$는 곡면 $\alpha_1$에서의 법선벡터인 $\nabla g_1(x^\ast, y^\ast, z^\ast)$에 직교합니다.
 즉,
