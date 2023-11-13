@@ -98,7 +98,7 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
   \begin{align*}
   \frac{\partial f}{\partial x_1}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_1}(x_1,\cdots,x_n)+\cdots+\lambda_1\frac{\partial g_m}{\partial x_1}(x_1,\cdots,x_n)\\
   &\vdots\\
-  \frac{\partial f}{\partial x_n}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_n}(x_1,\cdots,x_n)+\cdots+\lambda_1\frac{\partial g_m}{\partial x_n}(x_1,\cdots,x_n)\\
+  \frac{\partial f}{\partial x_n}(x_1,\cdots,x_n)=&\lambda_1\frac{\partial g_1}{\partial x_n}(x_1,\cdots,x_n)+\cdots+\lambda_n\frac{\partial g_m}{\partial x_n}(x_1,\cdots,x_n)\\
   g_1(x_1,\cdots,x_n) =& k_1\\
   &\vdots\\
   g_m(x_1,\cdots,x_n) =& k_m\\
