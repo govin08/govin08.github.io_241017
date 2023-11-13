@@ -121,7 +121,7 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdotsx_n\end{bmatrix}^T$$로 하나의 벡터로 나타낼 수 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdots x_n\end{bmatrix}^T$$로 하나의 벡터로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
