@@ -24,7 +24,7 @@ toc: true
 참고한 자료들은 다음의 세 개 입니다.
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers.aspx)
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
- - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
+ - [[3] University of British Columbia / An Example with Two Lagrange Multipliers](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
 
 [1]에는 Lagrange multiplier에 대한 아주 기본적인 설명과 예제가 있습니다.
 [2]에는 Lagrange multiplier에 대한 증명 혹은 설명을 두 가지(기하학적인 설명, 해석적인 증명)로 제시하고 있습니다.
@@ -84,9 +84,9 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 이와 관련한 몇가지 사항들입니다.
 
 - 1에서 $f$를 objective function(목적함수)라고 하고, $g_j(x_1,\cdots,x_n)=k_j$ 꼴의 식들을 constraint(제약조건)라고 합니다.
-  여기에서 $f$는 $f:\mathbb R^n\to\mathbb R$이고, $g_j$는 $g_j:\mathbb R^n\to\mathbb R$입니다.
-  즉, $f$, $g_j$는 모두 다변수 실함수입니다.
-- 일반성을 잃지 않고 $k_i$들을 모두 $0$으로 두어도 괜찮습니다.
+  여기에서 $f$는 $f:\mathbb R^n\to\mathbb R$이고, $g_j$도 $g_j:\mathbb R^n\to\mathbb R$입니다.
+  즉, $f$와 $g_j$는 모두 다변수 실함수입니다.
+- 일반성을 잃지 않고 $k_j$들을 모두 $0$으로 두어도 괜찮습니다.
   그러니까, $g_j(x_1,\cdots,x_n)=k_j$라는 제약조건이 있었다면, 새로운 함수 $g'_j$를 $g'_j(x_1,\cdots,x_n)=g_j(x_1,\cdots,x_n)-k_j$으로 둘 수 있습니다.
   그러면 제약조건이 $g'_j(x_1,\cdots,x_n)=0$의 형태로 바뀔 수 있다는 것입니다.
 - 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다. (적어도 모든 종류의 partial derivative들이 존재해야 합니다.)
@@ -114,14 +114,16 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
   이 포스트에서는 $k=1$일 때 $(\star)$ 식을 사용하고 $k=2$일 때는 원래 식을 사용합니다.
 
 - 최댓값을 구하는 것만 썼지만, 최솟값을 구하는 것도 똑같은 방식으로 진행될 수 있습니다.
-  그러니까 Lagrange multiplier method는 일반적으로 주어진 실함수의 optima(극값, maxima와 minima)를 구하는 방법입니다.
+  그러니까 Lagrange multiplier method는 일반적으로 주어진 실함수의 optima(최댓값과 최솟값)를 구하는 방법입니다.
 - 위 식에서의 $\lambda_j$를 Lagrange multiplier라고 부릅니다.
-  그러니까, 이러한 최적화 기법은 Lagrange multiplier 라고 불리는 것보다는 Lagrange multiplier <b>method</b>(라그랑지 승수<b>법</b>) 라고 불리는 게 맞을 것 같습니다.
+  그러니까, 이러한 최적화 기법을 보통 Lagrange multiplier 라고 부르긴 하지만 더 정확하게는 Lagrange multiplier <b>method</b>(라그랑지 승수<b>법</b>) 라고 불리는 게 맞을 것 같습니다.
 
 문제의 formulation을 꽤 일반적으로 적어보았습니다.
 그래서 잘 눈에 들어오지 않을 수 있는데, 이후부터는 더 쉽게 서술할 것 같습니다.
 다만, 지금 여기에 쓴 것보다도 더 일반적으로 많이 기술되는 경우가 많은 것 같습니다.
-예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdots x_n\end{bmatrix}^T$$로 하나의 벡터로 나타낼 수 있을 것입니다.
+예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고,
+그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며,
+$(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdots x_n\end{bmatrix}^T$로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
 [Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 추상적으로 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
@@ -509,7 +511,7 @@ $\square$
 따라서 Lagrange multiplier도 $\lambda_1$, $\lambda_2$의 두 개인 경우를 다루고 있습니다.
 
 이 부분은 따로 [pdf 파일](https://github.com/govin08/basic_math/blob/master/2023/1108_lagrange_multiplier/1108_lagrange_multiplier.pdf)을 만들어두기도 했습니다.
-그런데, [3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 문제를 고려했습니다.
+[3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 문제를 고려했습니다.
 그래서 pdf 파일과 이 포스트는 증명 과정의 부등호에 있어 약간의 차이가 있습니다.
 
 ## 4.1. The statement
@@ -560,7 +562,7 @@ $\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambd
 ## 4.2. a proof
 
 $g_1$, $g_2$가 미분가능하다는 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
-두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다.
+두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다. (아래 그림에서, $\alpha_1$은 검은 곡면, $\alpha_2$는 파란 곡면, $l$은 빨간 곡선)
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\4.2.jpg){: .img-80-center}
