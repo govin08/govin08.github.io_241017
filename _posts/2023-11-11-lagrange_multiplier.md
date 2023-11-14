@@ -124,7 +124,7 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 예를 들어, $g_1$, $\cdots$, $g_m$을 합쳐서 하나의 $g:\mathbb R^n\to\mathbb R^m$으로 쓸 수 있을 것이고, 그러면 $\lambda$도 하나의 벡터 $\boldsymbol \lambda=\begin{bmatrix}\lambda_1\cdots\lambda_n\end{bmatrix}^T$로서 표현할 수도 있을 것이며, $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdots x_n\end{bmatrix}^T$$로 하나의 벡터로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
-[Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 abstract하게 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
+[Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 추상적으로 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
 
 Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (...)" 형식의 조건문으로 서술하면 다음과 같이 될 것입니다.
 
@@ -291,8 +291,8 @@ $$x(1+8y)=0$$
 
 입니다.
 
-따라서 $x=0$ 이거나 $y=-\frac18$입니다.
-그런데 $\frac{dy}{dx}=8x$가 양수인 경우를 찾고 있으므로 $x\ne0$이고 따라서 $y=-\frac18$입니다.
+그러면 $x=0$ 이거나 $y=-\frac18$입니다.
+그런데 $\frac{dy}{dx}=8x$가 양수 또는 음수인 경우를 찾고 있으므로 $x\ne0$이고 따라서 $y=-\frac18$입니다.
 이때의 $x$는 $x=\pm\frac{3\sqrt7}8$이고, 따라서 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 이며, 구하는 최댓값은 $k=8x^2-2y=\frac{65}8$이 됩니다.
 
 참고로 판별식을 사용한 풀이는 다음과 같습니다.
