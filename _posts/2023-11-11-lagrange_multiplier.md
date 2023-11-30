@@ -93,7 +93,8 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 - 일반성을 잃지 않고 $k_j$들을 모두 $0$으로 두어도 괜찮습니다.
   그러니까, $g_j(x_1,\cdots,x_n)=k_j$라는 제약조건이 있었다면, 새로운 함수 $g'_j$를 $g'_j(x_1,\cdots,x_n)=g_j(x_1,\cdots,x_n)-k_j$으로 둘 수 있습니다.
   그러면 제약조건이 $g'_j(x_1,\cdots,x_n)=0$의 형태로 바뀔 수 있다는 것입니다.
-- 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다. (적어도 모든 종류의 partial derivative들이 존재해야 합니다.)
+- 2에서 $f$와 $g_j$의 gradient가 있으므로 $f$와 $g_j$는 당연히 미분가능한 함수여야 합니다.
+  적어도 모든 종류의 partial derivative(편미분계수)들이 존재해야 합니다.
 - 2는 "잘 풀리는" 연립방정식입니다.
   다시 말해, 변수의 개수와 식의 개수가 같습니다.
   변수는 $x_1$, $\cdots$, $x_n$, $\lambda_1$, $\cdots$, $\lambda_m$의 $n+m$개이고, 식도
@@ -411,7 +412,7 @@ $$\nabla f\parallel\nabla g$$
 
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
 
-MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 문제 정의와 기하학적인 설명, 그리고 해석적인 증명을 보여주고 있습니다.
+MIT의 자료 [2]에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 대한 문제 정의와 기하학적인 설명, 그리고 해석적인 증명을 보여주고 있습니다.
 꼭 필요한 말들만 적어서 간결하게 설명하고 있습니다.
 여기에서는 문제 정의와 해석적인 증명만 옮겨보았습니다.
 
@@ -442,7 +443,7 @@ MIT의 자료에서는 아주 우아하고 깔끔하게, Lagrange multiplier에 
 
 <div class="notice">
 <b> 정리 </b> <br>
-제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
+제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)=0$를 만족시키는 실수 $\lambda$가 존재합니다.
 </div>
 
 MIT 자료에서는 이 statement를 기본적인 vector calculus를 사용하여 증명합니다.
@@ -455,7 +456,7 @@ $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k
 위 정리의 가정에 의하면, $f$는 이 곡면 $\alpha$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
 곡선 $\boldsymbol r(t)=\left(x(t), y(t), z(t)\right)$을 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이라고 가정하면,
 곡선 $\boldsymbol r:\mathbb R\to\mathbb R^3$와 $f:\mathbb R^3\to\mathbb R$의 합성함수인 $f\circ \boldsymbol r:\mathbb R\to\mathbb R$은 $t=0$에서 최댓값을 가지는 실함수입니다.
-즉,
+즉, 함수
 
 $$t\mapsto f\left(x(t),y(t),g(t)\right)$$
 
@@ -497,7 +498,7 @@ $$
 $$v\cdot \nabla f(x^\ast,y^\ast,z^\ast)=0$$
 
 입니다.
-그렇다는건, $f(x^\ast,y^\ast,z^\ast)$이 $\alpha$의 $P^\ast$에서의 법선벡터라는 말입니다.
+그렇다는건, $\nabla f(x^\ast,y^\ast,z^\ast)$이 $\alpha$의 $P^\ast$에서의 법선벡터라는 말입니다.
 이때, $\nabla g(x^\ast, y^\ast, z^\ast)$도 마찬가지로 $\alpha$의 $P^\ast$에서의 법선벡터이므로,
 두 벡터 $\nabla g(x^\ast, y^\ast, z^\ast)$와 $\nabla f(x^\ast,y^\ast,z^\ast)$는 서로 평행하거나 반대방향일 수밖에 없습니다.
 그러므로
@@ -598,7 +599,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$**$}$$
 $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v=0\tag4$$
 
 입니다.
-(이상의 과정은 3.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\mathbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
+(이상의 과정은 4.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\mathbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
 
 한편, 벡터 $v$는 곡면 $\alpha_1$에 속하므로 $v$는 곡면 $\alpha_1$에서의 법선벡터인 $\nabla g_1(x^\ast, y^\ast, z^\ast)$에 직교합니다.
 즉,
@@ -608,7 +609,8 @@ $$\nabla g_1(x^\ast,y^\ast,z^\ast)\cdot v = 0\tag5$$
 $$\nabla g_2(x^\ast,y^\ast,z^\ast)\cdot v = 0\tag6$$
 입니다.
 
-$\mathbb R^3$에서의 $v$의 orthogonal complement를 $v^\perp$이라고 쓰면, (4), (5), (6)으로부터 각각
+$\mathbb R^3$에서의 $v$의 orthogonal complement를 $v^\perp$이라고 쓰면, $v^\perp$는 원점을 지나고 $v$를 법선벡터로 가지는 평면이므로 2차원의 벡터공간입니다.
+그러면 (4), (5), (6)으로부터 각각
 
 $$
 \begin{align*}
@@ -644,4 +646,5 @@ $\square$
 
 지금까지 Lagrange multiplier method에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
-오타나 비문이 많을 수 있다고 생각되기도 하고, 구성이나 구도에 있어서도 개선할 점이 많으리라고 생각되는데, 시간이 날 때마다 고쳐보도록 하겠습니다.
+글을 다 쓰고 나서 시간이 날때마다 교정하기는 했는데 그래도 오타나 비문이 있을 수 있겠습니다.
+<!-- 오타나 비문이 많을 수 있다고 생각되기도 하고, 구성이나 구도에 있어서도 개선할 점이 많으리라고 생각되는데, 시간이 날 때마다 고쳐보도록 하겠습니다. -->
