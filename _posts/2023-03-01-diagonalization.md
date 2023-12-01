@@ -41,7 +41,7 @@ notice--danger / 빨강 / 참고 -->
 
 많은 내용을 한 포스트에 담았습니다.
 페이지를 넘기면서 내용을 보는 것 보다는 단지 스크롤과 하이퍼링크만을 사용해 내용을 보는 것이 읽는 입장에서도 편하다고 생각했고 쓰면서 검수하는 입장에서도 편했기 때문입니다.
-그러다보니, **페이지의 모든 수식이 완전히 조판되는 데에는 1분 이내의 시간이 걸립니다.**
+하지만, 내용이 너무 많다보니 **페이지의 모든 수식이 완전히 조판되는 데에는 조금 시간이 걸릴 수 있습니다.**
 
 # 1 정의
 
@@ -168,7 +168,7 @@ $$AB=BA=I$$
 즉 $A=B^{-1}$이기도 합니다.
 따라서 $A$의 역행렬이 존재하면
 
-$$AA^{-1}=A^{-1}=I$$
+$$AA^{-1}=A^{-1}A=I$$
 
 입니다.
 역행렬이 존재하는 행렬을 **가역행렬(invertible matrix)**이라고 부릅니다.
@@ -333,7 +333,7 @@ $$\bar A = \left(\overline{a_{ij}}\right)_{m\times n} = \left(a_{ij}\right)_{m\t
 따라서 $a_{ij}$들은 모두 실수입니다. $\square$
 
 지금까지 정의한 행렬 $P$, $Q$, $R$, $S$, $T$, $Z$에서 위의 사실을 간단히 확인해볼 수 있습니다.
-$P$, $Q$, $R$, $S$, $Z$는 실수로 이루어진 행렬들이고 $\overline P=P$, $\overline Q=Q$, $\overline R=R$, $\overline S=S$, $\overline T=T$가 성립합니다.
+$P$, $Q$, $R$, $S$, $Z$는 실수로 이루어진 행렬들이고 따라서 $\overline P=P$, $\overline Q=Q$, $\overline R=R$, $\overline S=S$, $\overline T=T$가 성립합니다.
 $Z$는 실수로만 이루어진 행렬이 아니고, 허수가 포함된 행렬입니다.
 따라서 $\bar Z\neq Z$입니다.
 
@@ -378,7 +378,7 @@ $$
 &=\overline{\left(AB\right)_{ij}}
 =\overline{\sum_{k=1}^na_{ik}b_{kj}}\\
 &=\sum_{k=1}^n\overline{a_{ik}}\overline{b_{kj}}
-=\overline A\;\overline B\\
+=\left(\overline A\;\overline B\right)_{ij}\\
 (AB)^H
 &=\left(\overline{AB}\right)^T
 =\left(\overline A\overline B\right)^T
