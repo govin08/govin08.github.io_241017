@@ -258,8 +258,6 @@ $$
 
 $m$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.3.gif){: .img-50-center}
-
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.3.gif){: .img-50-center}
 
 $m$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 작을 때이므로 포물선과 원이 아래에서 접할 때입니다.
