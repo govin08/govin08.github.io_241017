@@ -446,7 +446,7 @@ MIT의 자료 [2]에서는 아주 우아하고 깔끔하게, Lagrange multiplier
 제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
 </div>
 
-MIT 자료에서는 이 statement를 기본적인 vector calculus를 사용하여 증명합니다.
+MIT 자료에서는 이 정리를 기본적인 vector calculus를 사용하여 증명합니다.
 
 ## 2.2. 증명
 
