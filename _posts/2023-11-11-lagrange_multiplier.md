@@ -406,7 +406,7 @@ $$\nabla f\parallel\nabla g$$
 따라서, $f(x,y)$가 최댓값을 가지는 때는 $\nabla f(x,y)=\lambda\nabla g(x,y)$을 만족시키는 실수 $\lambda(\ne0)$가 존재하는 때인 것입니다.
 아래 그림은 [2]에 나오는 그림이지만 왜 $f$가 최댓값을 가질 때 $\nabla f\parallel\nabla g$여아 하는지를 잘 설명해주는 그림이니 여기에 첨부합니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.5.png){: .img-50-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\1.5.png){: .img-50-center}
 
 # 2. One multiplier
 
@@ -490,7 +490,7 @@ $$
 
 입니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\3.2.jpg){: .img-80-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.2.jpg){: .img-80-center}
 
 그런데 $\boldsymbol r$이 $\boldsymbol r(0)=P^\ast$를 만족시키는 곡면 $\alpha$ 위의 임의의 곡선이었으므로,
 곡면 $\alpha$의 $P^\ast$에서의 접평면 위의 임의의 벡터 $v$에 대하여
@@ -570,7 +570,7 @@ $g_1$, $g_2$가 미분가능하다는 것을 가정하고 있으므로 제약조
 두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2=0$을 형성합니다. (아래 그림에서, $\alpha_1$은 검은 곡면, $\alpha_2$는 파란 곡면, $l$은 빨간 곡선)
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
-![]({{site.url}}\images\2023-11-11-lagrange_multiplier\4.2.jpg){: .img-80-center}
+![]({{site.url}}\images\2023-11-11-lagrange_multiplier\3.2.jpg){: .img-80-center}
 
 위 정리의 가정에 의하면 $f$는 이 교선 $l$ 위의 점 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가집니다.
 이때, 교선 $l$은 미분가능한 곡선이므로, 점 $P^\ast$를 지나는 $l$의 한 접선방향 $v$를 생각할 수 있습니다.
