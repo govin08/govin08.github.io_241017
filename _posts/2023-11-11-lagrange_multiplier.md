@@ -9,9 +9,9 @@ author_profile: false
 toc: true
 ---
 
-# 1. Overview
+# 0. Overview
 
-## 1.1. Motivation
+## 0.1. Motivation
 
 이번 주 수요일(11/8)에, 직장 선배분이 Lagrange multiplier method(라그랑지 승수법)에 대해 물어보셨습니다.
 정확하게는 constraint(제약조건)의 개수가 2개인 Lagrange multiplier에 대해 문의하셨습니다.
@@ -19,7 +19,7 @@ toc: true
 다음 날 아침에 정리한 내용을 선배에게 공유해드릴 수 있었습니다.
 그리고 공부한 김에 관련 내용을 정리해서 오늘 (11/11, 토요일) 블로그에 포스팅합니다.
 
-## 1.2. 자료들
+## 0.2. 자료들
 
 참고한 자료들은 다음의 세 개 입니다.
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers.aspx)
@@ -28,7 +28,7 @@ toc: true
 
 [1]에는 Lagrange multiplier에 대한 아주 기본적인 설명과 예제가 있습니다.
 [2]에는 Lagrange multiplier에 대한 증명 혹은 설명을 두 가지(기하학적인 설명, 해석적인 증명)로 제시하고 있습니다.
-이때, [1]과 [2]는 모두 constraint의 개수가 1개인 Lagrange multiplier method에 대해 다루고 있고 변수의 개수는 2개 또는 3개입니다.
+이때, [1]과 [2]는 모두 constraint의 개수가 1개인 Lagrange multiplier method에 대해 다루고 있고 변수의 개수는 각각 2개와 3개입니다.
 [3]에서는 constraint의 개수가 2개이고 변수의 개수가 3개인 Lagrange multiplier method의 방법론을 기하학적으로 증명하고, 예시도 들고 있습니다.
 
 그러니까, 아주 일반적인 Lagrange multiplier에 대해서는 보지 않은 셈입니다.
@@ -38,7 +38,7 @@ toc: true
 
 에 자세히 설명되어 있는 듯합니다.
 
-## 1.3. 이전 공부
+## 0.3. 이전 공부
 
 학부 1학년 2학기에 Lagrange multiplier method에 대해 배웠습니다.
 그런데 아마도 시험범위에는 속하지 않았던 것 같기도 합니다.
@@ -55,11 +55,11 @@ toc: true
 그리고, 문제 오류가 생기면 수정사항을 학생들에게 공지해주어야 하기 때문에도 시험문제들을 조금씩 보곤 했는데, 그때에도 Lagrange multiplier 문제가 보이곤 했습니다.
 15년 전의 1학년 대상으로는 Lagrange multiplier 문제가 나오지 않았고 최근 학부에서는 시험문제로 나온 걸 보면, 그만큼 최근에는 응용수학 내지는 최적화 문제가 강조되는 추세인 것 같기도 합니다.
 
-## 1.4. 문제정의
+## 0.4. 문제정의
 
 Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 (조금 추상적으로 적어놓았습니다.
-사전지식이 확실히 있는 것이 아니라면 [다음 장](#2-a-simple-example)으로 넘어갈 것을 권합니다.)
+사전지식이 확실히 있는 것이 아니라면 [다음 장](#1-a-simple-example)으로 넘어갈 것을 권합니다.)
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -131,7 +131,7 @@ Lagrange multiplier method는 다음과 같은 방법론을 지칭합니다.
 $(x_1,\cdots x_n)$과 같은 표현도 $\boldsymbol x=\begin{bmatrix}x_1\cdots x_n\end{bmatrix}^T$로 나타낼 수 있을 것입니다.
 
 그런 식으로 서술되어 있는 곳이 [위키피디아](https://en.wikipedia.org/wiki/Lagrange_multiplier)입니다.
-[Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)도 굉장히 추상적으로 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
+[Summary and rationale](https://en.wikipedia.org/wiki/Lagrange_multiplier#Summary_and_rationale)은 굉장히 추상적으로 쓰여져있고, [Statement](https://en.wikipedia.org/wiki/Lagrange_multiplier#Statement)도 마찬가지로 쉽지 않게 쓰여져있습니다.
 
 Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (...)" 형식의 조건문으로 서술하면 다음과 같이 될 것입니다.
 
@@ -141,13 +141,13 @@ Lagrange multiplier의 방법론이 성립한다는 사실을 "if (...) then (..
 </div>
 
 
-# 2. A Simple Example
+# 1. A Simple Example
 
  - [[1] Paul's Online Notes / Section 14.5 : Lagrange Multiplier](https://tutorial.math.lamar.edu/classes/calciii/lagrangemultipliers)
 
 여기에서는 아주 간단한 Lagrange multiplier의 예시를 들고 있습니다.
 
-## 2.1. 문제
+## 1.1. 문제
 
 1. 다음과 같은 최적화 문제가 있다고 합시다.
 
@@ -184,7 +184,7 @@ $$
 제약조건 $x^2+y^2=1$ 하에서 $8x^2-2y$의 최댓값을 구하여라.
 </div>
 
-## 2.2. 풀이(이차함수)
+## 1.2. 풀이(이차함수)
 
 이 문제는 너무 간단한 문제여서 굳이 Lagrange multiplier를 쓰지 않아도 됩니다.
 예를 들어 중학교 3학년에서 배우는 '이차함수'를 사용하면
@@ -202,72 +202,72 @@ $$
 즉 $8x^2-2y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$에서 최댓값 $\frac{65}8$을 가집니다.
 
 
-## 2.3. 풀이(부등식의 영역)
+## 1.3. 풀이(부등식의 영역)
 
 고등학교 1학년 수준의 '부등식의 영역'으로도 풀릴 수 있습니다.
 사실 2015년 개정 교육과정으로 오면서 이것이 고등학교 1학년 범위에서 빠졌지만, 그래도 진로선택과목으로서 '경제 수학'에 해당 내용이 있는 것 같으니, 어쨌든 고등학교 수학에 속하는 수준으로 풀립니다.
 다음과 같이 풀면 됩니다.
 
-$8x^2-2y$를 $k$로 둡니다.
+$8x^2-2y$를 $m$으로 둡니다.
 즉,
 
-$$8x^2-2y=k$$
+$$8x^2-2y=m$$
 
 로 둡니다.
 그러면 문제는
 
 <div class="notice--info">
-$x^2+y^2=1$, $8x^2-2y=k$를 만족하는 $k$의 최댓값을 구하여라.
+$x^2+y^2=1$, $8x^2-2y=m$를 만족하는 $m$의 최댓값을 구하여라.
 </div>
 
 로 바뀔 수 있습니다.
 이것을 조금 더 정확하게 쓰면
 
 <div class="notice--info">
-두 식 $x^2+y^2=1$, $8x^2-2y=k$를 모두 만족시키는 $(x,y)$가 존재할 때, $k$의 최댓값을 구하여라.
+두 식 $x^2+y^2=1$, $8x^2-2y=m$를 모두 만족시키는 $(x,y)$가 존재할 때, $m$의 최댓값을 구하여라.
 </div>
 
 라고 바꿔쓸 수 있습니다.
 이것은 또다시,
 
 <div class="notice--info">
-두 그래프 $x^2+y^2=1$, $8x^2-2y=k$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+두 그래프 $x^2+y^2=1$, $8x^2-2y=m$의 교점이 존재할 때, $m$의 최댓값을 구하여라.
 </div>
 
 로 바뀔 수 있습니다.
 좀 더 엄밀하게 쓰면
 
 <div class="notice--info">
-두 그래프 $\{(x,y):x^2+y^2=1\}$, $\{(x,y):8x^2-2y=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+두 그래프 $\{(x,y):x^2+y^2=1\}$, $\{(x,y):8x^2-2y=m\}$의 교점이 존재할 때, $m$의 최댓값을 구하여라.
 </div>
 
 와 같이 쓰일 수도 있을겁니다.
 여하튼, 그러면 문제는 너무 쉬워집니다.
 
-첫번째 그래프인 단위원은 고정되어 있고, 두번째 그래프인 포물선은 $k$값에 따라 달라집니다.
+첫번째 그래프인 단위원은 고정되어 있고, 두번째 그래프인 포물선은 $m$값에 따라 달라집니다.
 정확하게는,
 
 $$
 \begin{gather*}
-8x^2-2y=k\\
-y=4x^2-\frac k2
+8x^2-2y=m\\
+y=4x^2-\frac m2
 \end{gather*}
 $$
 
-로부터 포물선의 개형($4$)은 일정한데 꼭짓점 $(0,-\frac k2)$의 $y$좌표가 바뀝니다.
+로부터 포물선의 개형($4$)은 일정한데 꼭짓점 $(0,-\frac m2)$의 $y$좌표가 바뀝니다.
 
-$k$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
+$m$의 값을 변경해가면서 두 그래프가 교차하는 경우를 따져보면 아래 그림과 같습니다.
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.3.gif){: .img-50-center}
 
-$k$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 작을 때이므로 포물선과 원이 아래에서 접할 때입니다.
+$m$의 값이 가장 클 때에는 꼭짓점의 $y$좌표가 가장 작을 때이므로 포물선과 원이 아래에서 접할 때입니다.
 
-이 경우의 $k$값을 구하기 위해서 (판별식을 쓰면 답을 쉽게 구할 수 있지만, 좀 더 정확하게 구하기 위해) 미분을 활용할 수 있습니다.
+이 경우의 $m$값을 구하기 위해서 (판별식을 쓰면 답을 쉽게 구할 수 있지만, 좀 더 정확하게 구하기 위해) 미분을 활용할 수 있습니다.
 두 식
 
 $$
 \begin{align*}
-8x^2-2y&=k\\
+8x^2-2y&=m\\
 x^2+y^2&=1
 \end{align*}
 $$
@@ -300,21 +300,21 @@ $$x(1+8y)=0$$
 
 그러면 $x=0$ 이거나 $y=-\frac18$입니다.
 그런데 $\frac{dy}{dx}=8x$가 양수 또는 음수인 경우를 찾고 있으므로 $x\ne0$이고 따라서 $y=-\frac18$입니다.
-이때의 $x$는 $x=\pm\frac{3\sqrt7}8$이고, 따라서 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 이며, 구하는 최댓값은 $k=8x^2-2y=\frac{65}8$이 됩니다.
+이때의 $x$는 $x=\pm\frac{3\sqrt7}8$이고, 따라서 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 이며, 구하는 최댓값은 $m=8x^2-2y=\frac{65}8$이 됩니다.
 
 참고로 판별식을 사용한 풀이는 다음과 같습니다.
 
 $$
 \begin{gather*}
-8x^2-2y=k\\
-8(1-y^2)-2y=k\\
--8y^2-2y+8-k=0\\
-\frac D4=1+8(8-k)=0\\
-k=\frac{65}8
+8x^2-2y=m\\
+8(1-y^2)-2y=m\\
+-8y^2-2y+8-m=0\\
+\frac D4=1+8(8-m)=0\\
+m=\frac{65}8
 \end{gather*}
 $$
 
-## 2.4. 풀이(Lagrange multiplier)
+## 1.4. 풀이(Lagrange multiplier)
 
 이번에는 Lagrange multiplier로 이 문제를 풀어보겠습니다.
 
@@ -349,8 +349,8 @@ $$
    $$
 
    입니다.
-   이때, $g_x=\frac{\partial g}{\partial x}$, $g_y=\frac{\partial g}{\partial y}$입니다.
-   따라서
+   이때, $f_x=\frac{\partial f}{\partial x}$, $f_y=\frac{\partial f}{\partial y}$, $g_x=\frac{\partial g}{\partial x}$, $g_y=\frac{\partial g}{\partial y}$입니다.
+   따라서 지금 풀어야 하는 연립방정식은
 
    $$
    \begin{align*}
@@ -360,7 +360,7 @@ $$
    \end{align*}
    $$
 
-   을 풀면 됩니다.
+   입니다. (변수 3개, 식 3개)
    (1)에서 $x=0$이거나 $\lambda=8$입니다.
 
    만약 $x=0$이면, (3)으로부터 $y=\pm 1$이고 (2)로부터 이때의 $\lambda$는 $\lambda=\mp1$이 됩니다.
@@ -383,20 +383,20 @@ $$
    따라서 $f(x,y)$의 최댓값은 $\frac{65}8$이고 최대일 때의 $x$와 $y$는 $(x,y)=\left(\pm\frac{3\sqrt7}8,-\frac18\right)$ 입니다.
    이것은 이차함수나 부등식의 영역을 통해 구한 답과 일치합니다.
 
-## 2.5. 해석(Lagrange multiplier)
+## 1.5. 해석(Lagrange multiplier)
 
 이러한 Lagrange multiplier 방식의 풀이가 왜 유효한지에 대한 설명은 다음과 같습니다.
 
-2.3에서 이 최적화 문제는
+1.3에서 이 최적화 문제는
 
 <div class="notice--info">
-두 그래프 $\{(x,y):g(x,y)=k\}$, $\{(x,y):f(x,y)=k\}$의 교점이 존재할 때, $k$의 최댓값을 구하여라.
+두 그래프 $\{(x,y):g(x,y)=k\}$, $\{(x,y):f(x,y)=m\}$의 교점이 존재할 때, $m$의 최댓값을 구하여라.
 </div>
 
 와 같이 쓰일 수 있다고 했습니다.
 (단, $f(x,y)=8x^2-2y$, $g(x,y)=x^2+y^2$, $k=1$.)
 
-그러면 $k$값이 최대 또는 최소가 되는 순간은 두번째 도형(포물선)이 $k$값에 따라 움직이다가, 첫번째 도형(단위원)에서 막 떨어지는, 닿을락 말락한 순간입니다.
+그러면 $m$값이 최대 또는 최소가 되는 순간은 두번째 도형(포물선)이 $m$값에 따라 움직이다가, 첫번째 도형(단위원)에서 막 떨어지는, 닿을락 말락한 순간입니다.
 그리고 그 순간은 $f$와 $g$의 gradient가 서로 같은 방향을 가리키는 (혹은 반대방향을 가리키는) 순간입니다.
 즉,
 
@@ -408,7 +408,7 @@ $$\nabla f\parallel\nabla g$$
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\2.5.png){: .img-50-center}
 
-# 3. One multiplier
+# 2. One multiplier
 
  - [[2] MIT OpenCourseWare / Proof of Lagrange Multiplier](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/ebbeb8e61827a8058d2c45b674d003b3_MIT18_02SC_notes_22.pdf)
 
@@ -416,7 +416,7 @@ MIT의 자료 [2]에서는 아주 우아하고 깔끔하게, Lagrange multiplier
 꼭 필요한 말들만 적어서 간결하게 설명하고 있습니다.
 여기에서는 문제 정의와 해석적인 증명만 옮겨보았습니다.
 
-## 3.1. The statement
+## 2.1. 문제 정의
 
 1. 변수가 3개인 함수 $f$에 대한 최적화문제
 
@@ -443,12 +443,12 @@ MIT의 자료 [2]에서는 아주 우아하고 깔끔하게, Lagrange multiplier
 
 <div class="notice">
 <b> 정리 </b> <br>
-제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)=0$를 만족시키는 실수 $\lambda$가 존재합니다.
+제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
 </div>
 
 MIT 자료에서는 이 statement를 기본적인 vector calculus를 사용하여 증명합니다.
 
-## 3.2. a proof
+## 2.2. 증명
 
 $g$가 미분가능한 것을 가정하고 있으므로 제약조건 $g(x,y,z)=k$은 하나의 곡면 $\alpha$를 의미합니다.
 주어진 최적화문제는, 점 $P(x,y,z)$가 곡면 $\alpha$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
@@ -508,7 +508,7 @@ $$\nabla g(x^\ast, y^\ast, z^\ast)=\lambda\nabla f(x^\ast,y^\ast,z^\ast)$$
 를 만족시키는 실수 $\lambda$가 존재합니다.
 $\square$
 
-# 4. Two multipliers
+# 3. Two multipliers
 
  - [[3] University of British Columbia / An Example with Two Lagrange Multiplier](https://personal.math.ubc.ca/~feldman/m226/multiLagrange.pdf)
 
@@ -519,7 +519,7 @@ $\square$
 [3]과 pdf 파일에서는 최솟값을 구하는 경우를 다루고 있는데 여기에서는 이전 장과의 연관성을 고려해 최댓값을 구하는 문제를 고려했습니다.
 그래서 pdf 파일과 이 포스트는 증명 과정의 부등호에 있어 약간의 차이가 있습니다.
 
-## 4.1. The statement
+## 3.1. 문제 정의
 
 1. 변수가 3개이고 제약조건이 2개인 함수 $f$에 대한 최적화문제
 
@@ -561,13 +561,13 @@ $$
 <div class="notice">
 <b> 정리 </b> <br>
 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면
-$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재한다.
+$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lambda_2\nabla g_2(x^\ast,y^\ast,z^\ast)=0$를 만족시키는 실수 $\lambda_1$, $\lambda_2$가 존재한다.
 </div>
 
-## 4.2. a proof
+## 3.2. 증명
 
 $g_1$, $g_2$가 미분가능하다는 것을 가정하고 있으므로 제약조건 $g_1(x,y,z)=k_1$, $g_2(x,y,z)=k_2$는 각각 곡면 $\alpha_1$, $\alpha_2$을 의미합니다.
-두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2$을 형성합니다. (아래 그림에서, $\alpha_1$은 검은 곡면, $\alpha_2$는 파란 곡면, $l$은 빨간 곡선)
+두 곡면 $\alpha_1$과 $\alpha_2$가 $P^\ast(x^\ast,y^\ast,z^\ast)$의 근방에서 서로 일치하지 않는다고 가정하면, $\alpha_1$과 $\alpha_2$는 교선 $l:g_1-k_1=g_2-k_2=0$을 형성합니다. (아래 그림에서, $\alpha_1$은 검은 곡면, $\alpha_2$는 파란 곡면, $l$은 빨간 곡선)
 그렇다면 주어진 최적화문제는, 점 $P(x,y,z)$가 교선 $l$ 위에서 움직일 때, $f(x,y,z)$의 최댓값을 구하는 문제가 됩니다.
 
 ![]({{site.url}}\images\2023-11-11-lagrange_multiplier\4.2.jpg){: .img-80-center}
@@ -642,7 +642,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)+\lambda_1\nabla g_1(x^\ast,y^\ast,z^\ast)+\lamb
 이 성립합니다.
 $\square$
 
-# 5. 마치며
+# 4. 마치며
 
 지금까지 Lagrange multiplier method에 대해 써봤습니다.
 처음 생각했던 것보다는 훨씬 시간이 많이 들기는 했는데, 그래도 마쳤다는 것에 의미를 둘 수 있을 것 같습니다.
