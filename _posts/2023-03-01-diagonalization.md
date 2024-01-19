@@ -2023,11 +2023,11 @@ $$
 $$
 
 이것은 일반적으로 성립합니다.
-즉, $Ax=\lambda x$이면,
+즉, 만약 $x$가 $A$의 eigenvector 라서 $Ax=\lambda x$이면,
 
 $$A(cx)=cAx=c(\lambda x)=\lambda(cx)$$
 
-이기 때문입니다.
+이기 때문에 $cx$도 $A$의 eigenvalue입니다.
 
 한편, 정의 15의 식
 
