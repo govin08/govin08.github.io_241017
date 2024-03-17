@@ -53,7 +53,7 @@ toc: true
 
 대학원에 다닐 동안 시험기간이면 늘 미적분 시험감독을 들어가야 했는데, 시험을 보는 1학년 학생들을 감독하는 게 조금 따분하거나 할 일이 없으면 시험지에 무슨 문제가 나왔나 들춰보기도 했습니다.
 그리고, 문제 오류가 생기면 수정사항을 학생들에게 공지해주어야 하기 때문에도 시험문제들을 조금씩 보곤 했는데, 그때에도 Lagrange multiplier 문제가 보이곤 했습니다.
-15년 전의 1학년 대상으로는 Lagrange multiplier 문제가 나오지 않았고 최근 학부에서는 시험문제로 나온 걸 보면, 그만큼 최근에는 응용수학 내지는 최적화 문제가 강조되는 추세인 것 같기도 합니다.
+15년 전의 1학년 대상으로는 Lagrange multiplier 문제가 나오지 않았고 최근 학부에서는 시험문제로 나온 걸 보면, 그만큼 최근에는 최적화 기법을 포함한 응용수학이 강조되는 추세인 것 같기도 합니다.
 
 ## 0.4. 문제정의
 
@@ -446,7 +446,7 @@ MIT의 자료 [2]에서는 아주 우아하고 깔끔하게, Lagrange multiplier
 제약조건 $g(x,y,z)=k$ 하에서 $f(x,y,z)$가 $P^\ast(x^\ast,y^\ast,z^\ast)$에서 최댓값을 가지면 $\nabla f(x^\ast,y^\ast,z^\ast)=\lambda\nabla g(x^\ast,y^\ast,z^\ast)$를 만족시키는 실수 $\lambda$가 존재합니다.
 </div>
 
-MIT 자료에서는 이 statement를 기본적인 vector calculus를 사용하여 증명합니다.
+MIT 자료에서는 이 정리를 기본적인 vector calculus를 사용하여 증명합니다.
 
 ## 2.2. 증명
 
@@ -599,7 +599,7 @@ $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v\le0\tag{$**$}$$
 $$\nabla f(x^\ast,y^\ast,z^\ast)\cdot v=0\tag4$$
 
 입니다.
-(이상의 과정은 4.2에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\mathbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
+(이상의 과정은 [2.2](#2-2-증명)에서 했던 것처럼 $\boldsymbol r(0)=v$인 $\boldsymbol r:\mathbb R\to\mathbb R^3$을 도입해서 설명해도 마찬가지로 설명될 수 있을 겁니다.)
 
 한편, 벡터 $v$는 곡면 $\alpha_1$에 속하므로 $v$는 곡면 $\alpha_1$에서의 법선벡터인 $\nabla g_1(x^\ast, y^\ast, z^\ast)$에 직교합니다.
 즉,

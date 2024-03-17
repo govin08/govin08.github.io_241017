@@ -648,7 +648,7 @@ $$
 
 ## 3.2 Differentiation
 
-Let a function space $C^1(0,1)$ of all differentiable functions on the unit open interval $(0,1)$.
+Let $C^1(0,1)$ be the function space of all differentiable functions on the unit open interval $(0,1)$.
 Let $\Psi:C^1(0,1)\to\mathbb R$ be defined by
 
 $$\Psi(f)=f'\left(\frac12\right)$$
