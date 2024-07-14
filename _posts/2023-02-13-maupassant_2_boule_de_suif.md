@@ -338,11 +338,10 @@ author_profile: false
 어쩌면, 그런 가식적인 모습들이 굉장히 인간적으로 느껴지기까지 하는 부분이 있는 것 같습니다. -->
 
 - 책 정보
-    - 책이름 : 『목걸이』
     - 소설제목 : 「비곗덩어리」
     - 작가 : 기 드 모파상
+    - 출판연도 : 1880년
     - 출판사 : 소담출판사
-    - 출판연도 : 2003년
 - 그림 출처
     - https://openai.com/dall-e-2
     - https://www.durhamworldheritagesite.com/learn/history/normans/founding-normandy
