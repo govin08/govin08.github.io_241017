@@ -107,6 +107,6 @@ author_profile: false
   - 출판연도 : 1884년
   - 출판사 : 소담출판사
 - 그림 출처
-    - https://openai.com/dall-e-2
+    - [DALL E 2](https://openai.com/dall-e-2)
 - 참고자료
-    - https://en.wikipedia.org/wiki/Guy_de_Maupassant
+    - [Wikipedia : Guy de Maupassant](https://en.wikipedia.org/wiki/Guy_de_Maupassant)

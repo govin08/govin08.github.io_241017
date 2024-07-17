@@ -1144,6 +1144,6 @@ scroundrel, 즉 악당을 묘사한 소설이 바로 「벨 아미」입니다.
     - 출판사 : 민음사
     - 출판연도 : 1885년
 - 그림 출처
-    - https://openai.com/dall-e-2
+    - [DALL E 2](https://openai.com/dall-e-2)
 - 참고자료
-    - https://en.wikipedia.org/wiki/Bel-Ami
+    - [Wikipedia : Bel Ami]https://en.wikipedia.org/wiki/Bel-Ami

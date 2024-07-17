@@ -343,9 +343,10 @@ author_profile: false
     - 출판연도 : 1880년
     - 출판사 : 소담출판사
 - 그림 출처
-    - https://openai.com/dall-e-2
-    - https://www.durhamworldheritagesite.com/learn/history/normans/founding-normandy
-    - https://www.youtube.com/watch?v=dxzTg2Ge9SA
+    - [DALL E 2](https://openai.com/dall-e-2)
+    - [The Founding of Normandy
+    ](https://www.durhamworldheritagesite.com/learn/history/normans/founding-normandy)
+    - [The Franco-Prussian War](https://www.youtube.com/watch?v=dxzTg2Ge9SA)
 - 참고자료
-    - https://en.wikipedia.org/wiki/Franco-Prussian_War
+    - [Wikipedia : Franco-Prussian War](https://en.wikipedia.org/wiki/Franco-Prussian_War)
     - 「기 드 모파상 : 비곗덩어리 외 62편」, 기 드 모파상, 현대문학.

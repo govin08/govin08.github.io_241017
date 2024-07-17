@@ -757,7 +757,7 @@ un velo (어떤 자전거), un chat (어떤 고양이)라고 쓸 때에 남성�
     - 출판사 : 민음사
     - 출판연도 : 1883년
 - 그림 출처
-    - https://openai.com/dall-e-2
+    - [DALL E 2](https://openai.com/dall-e-2)
 - 참고자료
-    - https://en.wikipedia.org/wiki/Une_vie_(Maupassant)
-    - http://wutheringexpectations.blogspot.com/2013/03/maupassants-schopenhauer-this-one-is.html
+    - [Wikipedia : Maupassant](https://en.wikipedia.org/wiki/Une_vie_(Maupassant))
+    - [Maupassant's Schopenhauer - this one is more of a head scratcher](http://wutheringexpectations.blogspot.com/2013/03/maupassants-schopenhauer-this-one-is.html)
