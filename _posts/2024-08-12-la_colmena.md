@@ -8,7 +8,7 @@ author_profile: false
 
 # 1. 읽기 어려운 소설
 
-![colmena_1]({{site.url}}\images\2024-07-14-cela\colmena_1.jpg){: .img-40-center}
+![colmena_1]({{site.url}}\images\2024-07-14-cela\front.jpg){: .img-40-center}
 
 세상에는 참 다양한 "읽기 어려운 소설"들이 있는 것 같습니다.
 많은 비유와 상징을 사용해서 이해하기 힘든 밀란 쿤데라가 있고, 심리묘사를 상세하게 하느라 난해한 버지니아 울프나 프루스트가 있고, 병적인 인물들의 내면을 철저히 따라가야 해서 어려운 도스토옙스키가 있습니다.
