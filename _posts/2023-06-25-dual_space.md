@@ -16,7 +16,7 @@ toc: true
 dual space에 대해서는 당연히, 학부 2학년 때 배운 바가 있기는 하지만, 늘 그렇듯이 수업시간에 빠르게 지나간 정도였고, 깊이 고민해본 적은 없습니다.
 해당 자료에 등장하는 annihilator라는 개념에 대해서는 대학원 대수 수업때 잠깐 접었던 적이 있습니다.
 이 포스트의 마지막 결론이 될 것으로 보이는 $\text{dim}(V)=\text{dim}(U)+\text{dim}(U^0)$는, (Strang 책의) fundamental theorem of linear algebra 같은 걸 떠올리게 합니다.
-혹은, $U<V$일 때, $\text{dim}(V)=\text{dim}(U)+\text{dim}(V^\perp)$가 성립한다는 식과도 유사해보입니다. (같은 것일지도 모르겠습니다.)
+혹은, $U<V$일 때, $\text{dim}(V)=\text{dim}(U)+\text{dim}(U^\perp)$가 성립한다는 식과도 유사해보입니다. (같은 것일지도 모르겠습니다.)
 
 간단한 수학이고, 그 정도의 목적을 위해서는 영어가 훨씬 편할 것 같아서 영어로 작성했습니다.
 간략히 적기 위해서 universal / existential quantifier ($\forall, \exists$)를 적극적으로 활용했습니다.
@@ -114,7 +114,7 @@ $$a_1v_1+\cdots+a_nv_n\quad\Longrightarrow\quad a_1=\cdots=a_n=0,$$
 where $a_i\in F$ for all $i$.
 We say $\\{v_1,\cdots,v_n\\}$ spans $V$ or
 
-$$\text{span}(\{v_1,\cdots,v_n\})=V,$$
+$$V\subset\text{span}(\{v_1,\cdots,v_n\}),$$
 
 if every vector $v\in V$ can be expressed as a linear combination
 
