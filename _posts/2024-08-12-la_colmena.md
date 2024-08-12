@@ -8,7 +8,7 @@ author_profile: false
 
 # 1. 읽기 어려운 소설
 
-![colmena_1]({{site.url}}\images\2024-07-14-cela\colmena_1.jpg){: .img-30-center}
+![colmena_1]({{site.url}}\images\2024-07-14-cela\colmena_1.jpg){: .img-40-center}
 
 세상에는 참 다양한 "읽기 어려운 소설"들이 있는 것 같습니다.
 많은 비유와 상징을 사용해서 이해하기 힘든 밀란 쿤데라가 있고, 심리묘사를 상세하게 하느라 난해한 버지니아 울프나 프루스트가 있고, 병적인 인물들의 내면을 철저히 따라가야 해서 어려운 도스토옙스키가 있습니다.
@@ -45,7 +45,7 @@ author_profile: false
 
 # 2. 도냐 로사의 카페
 
-![colmena_2]({{site.url}}\images\2024-07-14-cela\colmena_2.jpeg){: .img-30-center}
+![colmena_2]({{site.url}}\images\2024-07-14-cela\colmena_2.jpeg){: .img-40-center}
 
 여러 등장인물들이 수많은 이야기 속에서 무질서하게 뻗어가는 듯한 소설이지만, 다행히도 소설의 공간적인 배경은 꽤 한정적입니다.
 스페인의 수도 마드리드입니다.
@@ -89,7 +89,7 @@ author_profile: false
 
 # 3. 마르틴 마르코
 
-![colmena_3]({{site.url}}\images\2024-07-14-cela\colmena_3.jpeg){: .img-30-center}
+![colmena_3]({{site.url}}\images\2024-07-14-cela\colmena_3.jpeg){: .img-40-center}
 
 도냐 로사의 카페 다음으로 이 소설을 묶는 요소는 마르틴 마르코의 존재입니다.
 소설 속에 등장하는 꽤 많은 인물들은 불행하고 매력적인 젊은이 마르틴과 연관되어 있습니다.
@@ -153,7 +153,7 @@ author_profile: false
 
 # 4. 평범하지만 평범하지 않은 사람들
 
-![colmena_4]({{site.url}}\images\2024-07-14-cela\colmena_4.jpg){: .img-30-center}
+![colmena_4]({{site.url}}\images\2024-07-14-cela\colmena_4.jpg){: .img-40-center}
 
 셀라는 이렇듯 1943년 마드리드의 평범한 일상을 그려냈습니다.
 셀라가 그려낸 일상은 때로 소탈하고 때로 적나라합니다.
@@ -208,7 +208,7 @@ author_profile: false
 
 # 5. 젊은 사람들의 불행
 
-![colmena_5]({{site.url}}\images\2024-07-14-cela\colmena_5.jpg){: .img-30-center}
+![colmena_5]({{site.url}}\images\2024-07-14-cela\colmena_5.jpg){: .img-40-center}
 
 세상에 부유한 사람과 가난한 사람이 존재하는 건 역사가 시작된 이래로 항상 있어왔던 일입니다.
 빈부의 차이가 꼭 평등해져야 하는 것은 아닙니다.
