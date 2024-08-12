@@ -2,15 +2,13 @@
 layout: single
 title:  "카밀로 호세 셀라 - 「파스쿠알 두아르테 가족」"
 categories: literature
-tags: [cela]
+tags: [cela, spain, picaresque]
 author_profile: false
 ---
 
 # 1. 작가 : 카밀로 호세 셀라
 
-<div style="text-align : center; padding: 50px 1px 50px 1px;">
-    <img src="{{site.url}}\images\2024-07-14-cela\pascual_1.png" alt="pascual_1.png" width="300"/>
-</div>
+![pascual_1]({{site.url}}\images\2024-07-14-cela\pascual_1.png){: .img-30-center}
 
 문득 그런 생각이 들었습니다.
 "스페인 소설을 많이 안읽어봤다."
@@ -38,9 +36,7 @@ author_profile: false
 
 # 2. 「이방인」과 「인간실격」
 
-<div style="text-align : center; padding: 50px 1px 50px 1px;">
-    <img src="{{site.url}}\images\2024-07-14-cela\pascual_2.png" alt="pascual_2.png" width="300"/>
-</div>
+![pascual_2]({{site.url}}\images\2024-07-14-cela\pascual_2.png){: .img-30-center}
 
 소설을 다 읽고 나서 두 소설이 생각났습니다.
 알베르 까뮈의 「이방인」과 다자이 오사무의 「인간실격」.
@@ -64,9 +60,8 @@ author_profile: false
 그리고 그 편지가 누군가에 의해 발견되어 책으로 출간됩니다.
 
 # 3. 「파스쿠알 두아르테 가족」
-<div style="text-align : center; padding: 50px 1px 50px 1px;">
-    <img src="{{site.url}}\images\2024-07-14-cela\pascual_3.png" alt="pascual_3.png" width="300"/>
-</div>
+
+![pascual_3]({{site.url}}\images\2024-07-14-cela\pascual_3.png){: .img-30-center}
 
 파스쿠알은 가난과 부조리 속에 처해있습니다.
 스페인의 한 시골마을, 지독하게 가난한 가정에서 태어납니다.
@@ -87,9 +82,8 @@ author_profile: false
 파스쿠알의 비극은 요조의 비극보다 더 잔혹해보입니다.
 
 # 4. 감상
-<div style="text-align : center; padding: 50px 1px 50px 1px;">
-    <img src="{{site.url}}\images\2024-07-14-cela\pascual_4.png" alt="pascual_4.png" width="300"/>
-</div>
+
+![pascual_4]({{site.url}}\images\2024-07-14-cela\pascual_4.png){: .img-30-center}
 
 책을 펴고 소설을 읽기 시작하자 대단한 흡입력으로 소설 속에 빠져들었습니다.
 '노벨문학상 아무나 받는 게 아니군'이라는 생각이 들었지요.
