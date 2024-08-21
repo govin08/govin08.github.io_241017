@@ -445,7 +445,7 @@ So defined $\\{f_i\\}_{i=1}^n$ is called the **dual basis** of the original basi
 
 Since both of the bases have the same cardinality, $V$ and $V^\ast$ are vector spaces of the same dimension.
 
-**2.3.4 Two spaces have the cardinality**
+**2.3.4 Two spaces have the same cardinality**
 
 Moreover, $V$ is equivalent to $V^\ast$ in the sense of cardinality, or $V\sim V^\ast$.
 That is, the map $\mathcal D:V\to V^\ast$ defined by
@@ -499,7 +499,7 @@ $$
 \end{align*}
 $$
 
-Combining 2.3.4 and 2.3.5, $\mathcal D$ is an isomorphism of $V$ onto $V^\ast$.
+Combining 2.3.4 and 2.3.5, $V$ is isomorphic to $V^\ast$.
 
 
 ## 2.4 Annihilator
@@ -620,7 +620,7 @@ $$\text{dim}(U)+\text{dim}(U^0)=n+0=n=\text{dim}(V).$$
 This proves the statement in 2.4.1 in general.
 $\square$
 
-# 3. Examples of linear functionals and dual of them
+# 3. Examples of linear functionals and duals of them
 
 ## 3.1 Integration
 
