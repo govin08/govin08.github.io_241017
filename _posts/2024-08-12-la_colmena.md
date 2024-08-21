@@ -18,7 +18,7 @@ author_profile: false
 저는 어려운 소설을 읽을 때, 등장 인물들이 나온 페이지 수를 적는 습관이 있습니다.
 일종의 색인을 만드는 건데요.
 아무리 어려운 소설이라도 이 방법을 쓰면 등장인물을 다 파악할 수 있게 되어서 애용합니다.
-이 소설을 읽을 때에는, 그 어느때보다도 필요해서 색인을 열심히 만들어봤는데, 제가 [기록](https://github.com/govin08/public/blob/master/cela/colmena_characters.txt)한 바에 따르면 이 소설에 등장하는 등장인물은 300명이 넘습니다. [(계산 코드)](https://github.com/govin08/public/blob/master/cela/count.py)
+이 소설을 읽을 때에는, 그 어느때보다도 필요해서 색인을 열심히 만들어봤는데, 제가 [기록](https://github.com/govin08/public/tree/master/2406_cela/colmena_characters.txt){:target="_blank"}한 바에 따르면 이 소설에 등장하는 등장인물은 300명이 넘습니다. [(계산 코드)](https://github.com/govin08/public/tree/master/2406_cela/count.py){:target="_blank"}
 
 조금 더 정확하게는 전체 등장인물은 309명이고, 그 중 이름이 언급되는 인물은 199명이며, 이름이 언급되면서 소설의 서사에 등장하는 인물은 116명입니다.
 예를 들어 마르틴 마르코나 엘비라는 이름도 언급되고 서사에도 등장합니다.
@@ -105,7 +105,7 @@ author_profile: false
 늘 배고픈 마르틴은 유일한 혈육인 누나 필로의 집에 가곤 합니다. 매형 로베르토와 마르틴은 사이가 좋지 않지만, 로베르토가 열심히 버는 덕에 필로를 보러 가면 저녁 정도는 먹을 수 있습니다.
 
 마르틴과 파코는 셀레스티노가 운영하는 조그만 술집에서 모여 이야기를 나누곤 합니다.
-셀레스티노는 니체의 <아침 놀>에 나오는 '동정심은 지살의 해독제이다. 동정심은 우리에게 쾌감을 안겨줄 뿐만 아니라, 약간만 느껴도 우리는 우월감에서 오는 만족을 가득 느낄 수 있기 때문이다.' 와 같은 구절을 좋아하는 니체 신봉자입니다.
+셀레스티노는 니체의 「아침 놀」에 나오는 '동정심은 지살의 해독제이다. 동정심은 우리에게 쾌감을 안겨줄 뿐만 아니라, 약간만 느껴도 우리는 우월감에서 오는 만족을 가득 느낄 수 있기 때문이다.' 와 같은 구절을 좋아하는 니체 신봉자입니다.
 마르틴은 술값을 치르지 못하고 외상으로 달아놓는 경우가 잦았습니다.
 어느 날, 셀레스티느논 마르틴에게 외상 문제를 언급하는데 마르틴은 되려 셀레스티노에게 "당신이 니체를 읽은 사람이라고 할 수 있냐"며 언쟁을 벌입니다.
 셀레스티노는 마르틴의 말도 안되는 비난에 화가 났지만,"맹목적인 분노에 몸을 맡기는 것은 짐승의 성질에 다가가는 일이다."라는 니체의 말을 떠올리며 마르틴에게 대응하지 않습니다.
@@ -238,6 +238,6 @@ author_profile: false
   - 출판사 : 민음사
   - 출판연도 : 1950년
 - 그림 출처
-  - [playground AI](https://playground.com/)
+  - [playground AI](https://playground.com/){:target="_blank"}
 - 참고자료
-  - [Wikipedia : The Hive (Cela novel)](https://en.wikipedia.org/wiki/The_Hive_(Cela_novel))
+  - [Wikipedia : The Hive (Cela novel)](https://en.wikipedia.org/wiki/The_Hive_(Cela_novel)){:target="_blank"}

@@ -348,7 +348,7 @@ $\mathcal A=\\{A_i\mid i=1,2,\cdots,n\\}$가 $S$의 분할인 것은 그림으�
 
 <div class="notice--info">
 <b> 전확률의 정리 </b> <br>
-사건들의 집합 $\mathcal A=\{A_i\mid i=1,2,\cdots,n\}$가 $S$의 분할이고 $B$가 사건일 때,
+사건들의 집합 $\mathcal A=\\{A_i\mid i=1,2,\cdots,n\\}$가 $S$의 분할이고 $B$가 사건일 때,
 \begin{align*}
 P(B)
 &=\sum_{i=1}^nP(A_i\cap B)\\
